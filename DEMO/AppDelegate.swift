@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import GeoFire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
