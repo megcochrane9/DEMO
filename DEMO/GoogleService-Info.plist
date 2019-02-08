@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>748749362940-lorbppn9bg1e4t6qpl1eg8asjbj8g4i0.apps.googleusercontent.com</string>
+	<string>748749362940-gm94v8mihga5ubil7qqtnujooet6ll2p.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.748749362940-lorbppn9bg1e4t6qpl1eg8asjbj8g4i0</string>
+	<string>com.googleusercontent.apps.748749362940-gm94v8mihga5ubil7qqtnujooet6ll2p</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDUfNLA-SYuU_lRvv5WUuJq_1kcuUT_LOs</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>megcochrane.MEGAFIT-Final</string>
+	<string>megcochrane.DEMO</string>
 	<key>PROJECT_ID</key>
 	<string>megafit-9ece7</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:748749362940:ios:57554323d04965c4</string>
+	<string>1:748749362940:ios:0924d5bb08f061bf</string>
 	<key>DATABASE_URL</key>
 	<string>https://megafit-9ece7.firebaseio.com</string>
 </dict>

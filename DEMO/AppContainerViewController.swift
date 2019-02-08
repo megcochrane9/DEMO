@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import Firebase
-import GeoFire
 
 class AppContainerViewControl: UIViewController {
     
@@ -15,7 +13,7 @@ class AppContainerViewControl: UIViewController {
         super.viewDidAppear(animated)
         
         AppManager.shared.appContainer = self
-        AppManager.shared.shareApp
+        AppManager.shared.showApp()
     }
     
 }

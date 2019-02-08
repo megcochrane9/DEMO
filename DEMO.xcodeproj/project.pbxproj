@@ -15,10 +15,10 @@
 		89BCFF77220374380091CCA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BCFF75220374380091CCA6 /* LaunchScreen.storyboard */; };
 		89BCFF82220374380091CCA6 /* DEMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF81220374380091CCA6 /* DEMOTests.swift */; };
 		89BCFF8D220374380091CCA6 /* DEMOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF8C220374380091CCA6 /* DEMOUITests.swift */; };
-		89BCFF9B220376200091CCA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89BCFF9A220376200091CCA6 /* GoogleService-Info.plist */; };
 		89BCFF9E220377DA0091CCA6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 89BCFF9D220377D90091CCA6 /* Podfile */; };
 		89BCFFA0220386750091CCA6 /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF9F220386750091CCA6 /* AppContainerViewController.swift */; };
 		89BCFFA2220388EC0091CCA6 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFFA1220388EC0091CCA6 /* AppManager.swift */; };
+		89BCFFE3220D82B40091CCA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89BCFFE2220D82B40091CCA6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,11 +55,10 @@
 		89BCFF88220374380091CCA6 /* DEMOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DEMOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BCFF8C220374380091CCA6 /* DEMOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEMOUITests.swift; sourceTree = "<group>"; };
 		89BCFF8E220374380091CCA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89BCFF9A220376200091CCA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		89BCFF9C220376250091CCA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89BCFF9D220377D90091CCA6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		89BCFF9F220386750091CCA6 /* AppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppContainerViewController.swift; path = /Users/megcochrane/Desktop/DEMO/DEMO/AppContainerViewController.swift; sourceTree = "<absolute>"; };
 		89BCFFA1220388EC0091CCA6 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		89BCFFE2220D82B40091CCA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +104,6 @@
 				89BCFF80220374380091CCA6 /* DEMOTests */,
 				89BCFF8B220374380091CCA6 /* DEMOUITests */,
 				89BCFF6A220374370091CCA6 /* Products */,
-				89BCFF9A220376200091CCA6 /* GoogleService-Info.plist */,
 				5E67C41B739B8B0F9F05207C /* Pods */,
 				9AA353F8F688A4BD8541FFFA /* Frameworks */,
 			);
@@ -132,7 +130,7 @@
 				89BCFF73220374380091CCA6 /* Assets.xcassets */,
 				89BCFF75220374380091CCA6 /* LaunchScreen.storyboard */,
 				89BCFF78220374380091CCA6 /* Info.plist */,
-				89BCFF9C220376250091CCA6 /* GoogleService-Info.plist */,
+				89BCFFE2220D82B40091CCA6 /* GoogleService-Info.plist */,
 			);
 			path = DEMO;
 			sourceTree = "<group>";
@@ -271,7 +269,7 @@
 			files = (
 				89BCFF9E220377DA0091CCA6 /* Podfile in Resources */,
 				89BCFF77220374380091CCA6 /* LaunchScreen.storyboard in Resources */,
-				89BCFF9B220376200091CCA6 /* GoogleService-Info.plist in Resources */,
+				89BCFFE3220D82B40091CCA6 /* GoogleService-Info.plist in Resources */,
 				89BCFF74220374380091CCA6 /* Assets.xcassets in Resources */,
 				89BCFF72220374370091CCA6 /* Main.storyboard in Resources */,
 			);
