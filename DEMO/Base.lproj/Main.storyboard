@@ -156,15 +156,54 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Soup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtG-xq-VkD">
-                                <rect key="frame" x="47" y="159" width="68" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gf7-EB-fV0">
+                                <rect key="frame" x="16" y="212" width="359" height="138"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ok2-vv-zbz">
+                                    <size key="itemSize" width="129" height="139"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImagineCollectionViewCell" id="jrD-2Y-eLh">
+                                        <rect key="frame" x="0.0" y="-0.5" width="129" height="139"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="129" height="139"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gi4-HF-PLh" customClass="ImagineCollectionViewCell">
+                                                    <rect key="frame" x="12" y="11" width="118" height="117"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Gi4-HF-PLh" secondAttribute="bottom" constant="11" id="5KK-eX-hnc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gi4-HF-PLh" secondAttribute="trailing" constant="-1" id="fgy-3m-zkL"/>
+                                            <constraint firstItem="Gi4-HF-PLh" firstAttribute="top" secondItem="jrD-2Y-eLh" secondAttribute="top" constant="11" id="xTN-rB-gUs"/>
+                                            <constraint firstItem="Gi4-HF-PLh" firstAttribute="leading" secondItem="jrD-2Y-eLh" secondAttribute="leading" constant="12" id="zWk-DO-qFT"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="RD2-2q-LXG" id="tMF-J9-euF"/>
+                                    <outlet property="delegate" destination="RD2-2q-LXG" id="yCW-6r-7G4"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Soup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtG-xq-VkD">
+                                <rect key="frame" x="16" y="168" width="68" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.34154213109999998" blue="0.66309320289999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gf7-EB-fV0" firstAttribute="top" secondItem="XtG-xq-VkD" secondAttribute="bottom" constant="8" id="Rpg-hW-9dP"/>
+                            <constraint firstItem="Gf7-EB-fV0" firstAttribute="trailing" secondItem="nym-N1-8P8" secondAttribute="trailing" id="d4z-WJ-Bgl"/>
+                            <constraint firstItem="Gf7-EB-fV0" firstAttribute="leading" secondItem="nym-N1-8P8" secondAttribute="leading" constant="16" id="v97-nU-D7N"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nym-N1-8P8"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Food" id="cZI-cN-pYZ"/>
