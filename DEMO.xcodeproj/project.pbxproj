@@ -10,6 +10,7 @@
 		0A59CBF3BE02D8A2B5A57935 /* Pods_DEMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0603AA5D79752565D96FEFED /* Pods_DEMO.framework */; };
 		27C40C8F220D851900909B9B /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C40C8E220D851900909B9B /* AppContainerViewController.swift */; };
 		27C40C91220D87F700909B9B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C40C90220D87F700909B9B /* MainViewController.swift */; };
+		898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */; };
 		89BCFF6D220374370091CCA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF6C220374370091CCA6 /* AppDelegate.swift */; };
 		89BCFF6F220374370091CCA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF6E220374370091CCA6 /* LoginViewController.swift */; };
 		89BCFF72220374370091CCA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BCFF70220374370091CCA6 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		27C40C8E220D851900909B9B /* AppContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
 		27C40C90220D87F700909B9B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4F0C9C554AA990A4BE482265 /* Pods-DEMO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO.release.xcconfig"; path = "Pods/Target Support Files/Pods-DEMO/Pods-DEMO.release.xcconfig"; sourceTree = "<group>"; };
+		898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		89BCFF69220374370091CCA6 /* DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BCFF6C220374370091CCA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89BCFF6E220374370091CCA6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				27C40C8E220D851900909B9B /* AppContainerViewController.swift */,
 				89BCFFA1220388EC0091CCA6 /* AppManager.swift */,
 				89BCFF70220374370091CCA6 /* Main.storyboard */,
+				898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */,
 				27C40C90220D87F700909B9B /* MainViewController.swift */,
 				89BCFF73220374380091CCA6 /* Assets.xcassets */,
 				89BCFF75220374380091CCA6 /* LaunchScreen.storyboard */,
@@ -356,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */,
 				27C40C8F220D851900909B9B /* AppContainerViewController.swift in Sources */,
 				89BCFF6F220374370091CCA6 /* LoginViewController.swift in Sources */,
 				89BCFF6D220374370091CCA6 /* AppDelegate.swift in Sources */,
@@ -537,7 +541,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YGKX7P2G9Y;
+				DEVELOPMENT_TEAM = 52QW78PH32;
 				INFOPLIST_FILE = DEMO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,7 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YGKX7P2G9Y;
+				DEVELOPMENT_TEAM = 52QW78PH32;
 				INFOPLIST_FILE = DEMO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
