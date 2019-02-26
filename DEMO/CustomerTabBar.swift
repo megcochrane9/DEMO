@@ -1,9 +1,12 @@
-//
-//  File.swift
-//  DEMO
-//
-//  Created by Meg Cochrane on 25/02/2019.
-//  Copyright © 2019 Meg Cochrane. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class CustomerTabBar: UITabBarController, UITabBarControllerDelegate {
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    selectedIndex = 3
+  }
+  
+
+  
+}
