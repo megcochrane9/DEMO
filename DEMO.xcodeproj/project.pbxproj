@@ -9,42 +9,23 @@
 /* Begin PBXBuildFile section */
 		0A59CBF3BE02D8A2B5A57935 /* Pods_DEMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0603AA5D79752565D96FEFED /* Pods_DEMO.framework */; };
 		27C40C8F220D851900909B9B /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C40C8E220D851900909B9B /* AppContainerViewController.swift */; };
-		27C40C91220D87F700909B9B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C40C90220D87F700909B9B /* MainViewController.swift */; };
+		27ED94C82225875700CA37AC /* CustomerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED94C72225875700CA37AC /* CustomerTabBar.swift */; };
 		898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */; };
 		89BCFF6D220374370091CCA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF6C220374370091CCA6 /* AppDelegate.swift */; };
 		89BCFF6F220374370091CCA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF6E220374370091CCA6 /* LoginViewController.swift */; };
 		89BCFF72220374370091CCA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BCFF70220374370091CCA6 /* Main.storyboard */; };
 		89BCFF74220374380091CCA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89BCFF73220374380091CCA6 /* Assets.xcassets */; };
 		89BCFF77220374380091CCA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BCFF75220374380091CCA6 /* LaunchScreen.storyboard */; };
-		89BCFF82220374380091CCA6 /* DEMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF81220374380091CCA6 /* DEMOTests.swift */; };
-		89BCFF8D220374380091CCA6 /* DEMOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF8C220374380091CCA6 /* DEMOUITests.swift */; };
 		89BCFF9E220377DA0091CCA6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 89BCFF9D220377D90091CCA6 /* Podfile */; };
 		89BCFFA2220388EC0091CCA6 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFFA1220388EC0091CCA6 /* AppManager.swift */; };
 		89BCFFE3220D82B40091CCA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89BCFFE2220D82B40091CCA6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		89BCFF7E220374380091CCA6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 89BCFF61220374370091CCA6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 89BCFF68220374370091CCA6;
-			remoteInfo = DEMO;
-		};
-		89BCFF89220374380091CCA6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 89BCFF61220374370091CCA6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 89BCFF68220374370091CCA6;
-			remoteInfo = DEMO;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		0603AA5D79752565D96FEFED /* Pods_DEMO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DEMO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C91D373239DBC1982F5AEF /* Pods-DEMO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DEMO/Pods-DEMO.debug.xcconfig"; sourceTree = "<group>"; };
 		27C40C8E220D851900909B9B /* AppContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
-		27C40C90220D87F700909B9B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		27ED94C72225875700CA37AC /* CustomerTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerTabBar.swift; sourceTree = "<group>"; };
 		4F0C9C554AA990A4BE482265 /* Pods-DEMO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO.release.xcconfig"; path = "Pods/Target Support Files/Pods-DEMO/Pods-DEMO.release.xcconfig"; sourceTree = "<group>"; };
 		898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		89BCFF69220374370091CCA6 /* DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,12 +35,6 @@
 		89BCFF73220374380091CCA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89BCFF76220374380091CCA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89BCFF78220374380091CCA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89BCFF7D220374380091CCA6 /* DEMOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DEMOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		89BCFF81220374380091CCA6 /* DEMOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEMOTests.swift; sourceTree = "<group>"; };
-		89BCFF83220374380091CCA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89BCFF88220374380091CCA6 /* DEMOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DEMOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		89BCFF8C220374380091CCA6 /* DEMOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEMOUITests.swift; sourceTree = "<group>"; };
-		89BCFF8E220374380091CCA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89BCFF9D220377D90091CCA6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		89BCFFA1220388EC0091CCA6 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		89BCFFE2220D82B40091CCA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -71,20 +46,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A59CBF3BE02D8A2B5A57935 /* Pods_DEMO.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		89BCFF7A220374380091CCA6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		89BCFF85220374380091CCA6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +66,6 @@
 			children = (
 				89BCFF9D220377D90091CCA6 /* Podfile */,
 				89BCFF6B220374370091CCA6 /* DEMO */,
-				89BCFF80220374380091CCA6 /* DEMOTests */,
-				89BCFF8B220374380091CCA6 /* DEMOUITests */,
 				89BCFF6A220374370091CCA6 /* Products */,
 				5E67C41B739B8B0F9F05207C /* Pods */,
 				9AA353F8F688A4BD8541FFFA /* Frameworks */,
@@ -117,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				89BCFF69220374370091CCA6 /* DEMO.app */,
-				89BCFF7D220374380091CCA6 /* DEMOTests.xctest */,
-				89BCFF88220374380091CCA6 /* DEMOUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,31 +89,13 @@
 				89BCFFA1220388EC0091CCA6 /* AppManager.swift */,
 				89BCFF70220374370091CCA6 /* Main.storyboard */,
 				898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */,
-				27C40C90220D87F700909B9B /* MainViewController.swift */,
+				27ED94C72225875700CA37AC /* CustomerTabBar.swift */,
 				89BCFF73220374380091CCA6 /* Assets.xcassets */,
 				89BCFF75220374380091CCA6 /* LaunchScreen.storyboard */,
 				89BCFF78220374380091CCA6 /* Info.plist */,
 				89BCFFE2220D82B40091CCA6 /* GoogleService-Info.plist */,
 			);
 			path = DEMO;
-			sourceTree = "<group>";
-		};
-		89BCFF80220374380091CCA6 /* DEMOTests */ = {
-			isa = PBXGroup;
-			children = (
-				89BCFF81220374380091CCA6 /* DEMOTests.swift */,
-				89BCFF83220374380091CCA6 /* Info.plist */,
-			);
-			path = DEMOTests;
-			sourceTree = "<group>";
-		};
-		89BCFF8B220374380091CCA6 /* DEMOUITests */ = {
-			isa = PBXGroup;
-			children = (
-				89BCFF8C220374380091CCA6 /* DEMOUITests.swift */,
-				89BCFF8E220374380091CCA6 /* Info.plist */,
-			);
-			path = DEMOUITests;
 			sourceTree = "<group>";
 		};
 		9AA353F8F688A4BD8541FFFA /* Frameworks */ = {
@@ -189,42 +128,6 @@
 			productReference = 89BCFF69220374370091CCA6 /* DEMO.app */;
 			productType = "com.apple.product-type.application";
 		};
-		89BCFF7C220374380091CCA6 /* DEMOTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 89BCFF94220374380091CCA6 /* Build configuration list for PBXNativeTarget "DEMOTests" */;
-			buildPhases = (
-				89BCFF79220374380091CCA6 /* Sources */,
-				89BCFF7A220374380091CCA6 /* Frameworks */,
-				89BCFF7B220374380091CCA6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				89BCFF7F220374380091CCA6 /* PBXTargetDependency */,
-			);
-			name = DEMOTests;
-			productName = DEMOTests;
-			productReference = 89BCFF7D220374380091CCA6 /* DEMOTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		89BCFF87220374380091CCA6 /* DEMOUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 89BCFF97220374380091CCA6 /* Build configuration list for PBXNativeTarget "DEMOUITests" */;
-			buildPhases = (
-				89BCFF84220374380091CCA6 /* Sources */,
-				89BCFF85220374380091CCA6 /* Frameworks */,
-				89BCFF86220374380091CCA6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				89BCFF8A220374380091CCA6 /* PBXTargetDependency */,
-			);
-			name = DEMOUITests;
-			productName = DEMOUITests;
-			productReference = 89BCFF88220374380091CCA6 /* DEMOUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -237,14 +140,6 @@
 				TargetAttributes = {
 					89BCFF68220374370091CCA6 = {
 						CreatedOnToolsVersion = 10.0;
-					};
-					89BCFF7C220374380091CCA6 = {
-						CreatedOnToolsVersion = 10.0;
-						TestTargetID = 89BCFF68220374370091CCA6;
-					};
-					89BCFF87220374380091CCA6 = {
-						CreatedOnToolsVersion = 10.0;
-						TestTargetID = 89BCFF68220374370091CCA6;
 					};
 				};
 			};
@@ -262,8 +157,6 @@
 			projectRoot = "";
 			targets = (
 				89BCFF68220374370091CCA6 /* DEMO */,
-				89BCFF7C220374380091CCA6 /* DEMOTests */,
-				89BCFF87220374380091CCA6 /* DEMOUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -278,20 +171,6 @@
 				89BCFFE3220D82B40091CCA6 /* GoogleService-Info.plist in Resources */,
 				89BCFF74220374380091CCA6 /* Assets.xcassets in Resources */,
 				89BCFF72220374370091CCA6 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		89BCFF7B220374380091CCA6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		89BCFF86220374380091CCA6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,44 +239,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */,
+				27ED94C82225875700CA37AC /* CustomerTabBar.swift in Sources */,
 				27C40C8F220D851900909B9B /* AppContainerViewController.swift in Sources */,
 				89BCFF6F220374370091CCA6 /* LoginViewController.swift in Sources */,
 				89BCFF6D220374370091CCA6 /* AppDelegate.swift in Sources */,
 				89BCFFA2220388EC0091CCA6 /* AppManager.swift in Sources */,
-				27C40C91220D87F700909B9B /* MainViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		89BCFF79220374380091CCA6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				89BCFF82220374380091CCA6 /* DEMOTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		89BCFF84220374380091CCA6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				89BCFF8D220374380091CCA6 /* DEMOUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		89BCFF7F220374380091CCA6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 89BCFF68220374370091CCA6 /* DEMO */;
-			targetProxy = 89BCFF7E220374380091CCA6 /* PBXContainerItemProxy */;
-		};
-		89BCFF8A220374380091CCA6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 89BCFF68220374370091CCA6 /* DEMO */;
-			targetProxy = 89BCFF89220374380091CCA6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		89BCFF70220374370091CCA6 /* Main.storyboard */ = {
@@ -573,88 +423,6 @@
 			};
 			name = Release;
 		};
-		89BCFF95220374380091CCA6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52QW78PH32;
-				INFOPLIST_FILE = DEMOTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = megcochrane.DEMOTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DEMO.app/DEMO";
-			};
-			name = Debug;
-		};
-		89BCFF96220374380091CCA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52QW78PH32;
-				INFOPLIST_FILE = DEMOTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = megcochrane.DEMOTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DEMO.app/DEMO";
-			};
-			name = Release;
-		};
-		89BCFF98220374380091CCA6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52QW78PH32;
-				INFOPLIST_FILE = DEMOUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = megcochrane.DEMOUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DEMO;
-			};
-			name = Debug;
-		};
-		89BCFF99220374380091CCA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52QW78PH32;
-				INFOPLIST_FILE = DEMOUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = megcochrane.DEMOUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DEMO;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -672,24 +440,6 @@
 			buildConfigurations = (
 				89BCFF92220374380091CCA6 /* Debug */,
 				89BCFF93220374380091CCA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		89BCFF94220374380091CCA6 /* Build configuration list for PBXNativeTarget "DEMOTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				89BCFF95220374380091CCA6 /* Debug */,
-				89BCFF96220374380091CCA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		89BCFF97220374380091CCA6 /* Build configuration list for PBXNativeTarget "DEMOUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				89BCFF98220374380091CCA6 /* Debug */,
-				89BCFF99220374380091CCA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
