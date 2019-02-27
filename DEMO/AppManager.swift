@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GeoFire
+import HealthKit
 
 
 class AppManager {
