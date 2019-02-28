@@ -2,6 +2,19 @@ import UIKit
 
 class CalendarViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return DaysInMonths[month]
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Calendar", for: indexPath) as! DataCollectionViewCell
+        cell.backgroundColor = UIColor.clear
+        cell.DateLabel.text = "\(indexPath.row + 1)"
+        
+        return cell
+        
+    }
+    
     
     
     @IBOutlet weak var Calendar: UICollectionView!
@@ -32,9 +45,45 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     
     @IBAction func Next(_ sender: Any) {
+        switch currentMonth {
+        case "December":
+            month = 0
+            year += 1
+            
+            currentMonth = Months[month]
+            
+            MonthLabel.text = "\(currentMonth) \(year)"
+            Calendar.reloadData()
+            
+        default:
+            month += 1
+            
+            currentMonth = Months[month]
+
+            MonthLabel.text = "\(currentMonth) \(year)"
+            Calendar.reloadData()
+        }
     }
     
+    
     @IBAction func Back(_ sender: Any) {
+        switch currentMonth {
+        case "January":
+            month = 11
+            year -= 1
+            
+            currentMonth = Months[month]
+            
+            MonthLabel.text = "\(currentMonth) \(year)"
+            Calendar.reloadData()
+            
+        default:
+            month -= 1
+            
+            currentMonth = Months[month]
+            
+            MonthLabel.text = "\(currentMonth) \(year)"
+            Calendar.reloadData()
     }
     
     
@@ -56,6 +105,9 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Calendar", for: indexPath) as! DataCollectionViewCell
         cell.backgroundColor = UIColor.clear
         cell.DateLabel.text = "\(indexPath.row + 1)"
-    }
+        
+        return cell
 
+        }
+}
 }
