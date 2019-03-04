@@ -36,7 +36,7 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var Direction = 0 // =0 if we are at the the current month , = 1 if we are in a future month , = -1 if we are in a past month
     
-    var PositionIndex = 0 // here we will store the above vars of the empty boxes 
+    var PositionIndex = 0 // here we will store the above vars of the empty boxes
     
     
     
@@ -95,6 +95,28 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
             MonthLabel.text = "\(currentMonth) \(year)"
             Calendar.reloadData()
     }
+        
+        func GetStartDateDayPosition() {
+            switch Direction {
+            case 0:
+                switch currentDay{
+                case 1...7:
+                    NumberOfEmptyBox = currentWeekDay - currentDay
+                case 8...14:
+                    NumberOfEmptyBox = currentWeekDay - currentDay - 7
+                case 15...21:
+                    NumberOfEmptyBox = currentWeekDay - currentDay - 14
+                case 22...28:
+                    NumberOfEmptyBox = currentWeekDay - currentDay - 21
+                case 29...21:
+                    NumberOfEmptyBox = currentWeekDay - currentDay - 2
+            default:
+                break
+            }
+                
+                
+                }
+        }
     
     
     
