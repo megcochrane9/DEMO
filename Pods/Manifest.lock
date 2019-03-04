@@ -36,6 +36,7 @@ PODS:
     - FirebaseCore (~> 5.2)
     - GoogleUtilities/Environment (~> 5.3)
     - GoogleUtilities/UserDefaults (~> 5.3)
+  - FSCalendar (2.8.0)
   - GeoFire (3.0.0):
     - Firebase/Database (~> 5.0)
   - GoogleAppMeasurement (5.5.0):
@@ -73,13 +74,18 @@ PODS:
     - Parse/Core (= 1.17.2)
   - Parse/Core (1.17.2):
     - Bolts/Tasks (~> 1.9)
+  - SnapKit (4.2.0)
+  - SwiftDate (5.1.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - FSCalendar
   - GeoFire (from `https://github.com/firebase/geofire-objc.git`)
   - Parse
+  - SnapKit
+  - SwiftDate
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -91,12 +97,15 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseDatabase
     - FirebaseInstanceID
+    - FSCalendar
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
     - Parse
+    - SnapKit
+    - SwiftDate
 
 EXTERNAL SOURCES:
   GeoFire:
@@ -116,6 +125,7 @@ SPEC CHECKSUMS:
   FirebaseCore: ea2d1816723ef21492b8e9113303e1350db5e08c
   FirebaseDatabase: 23acb0c53cd4d4070a427b60100b2e4aaa97c45d
   FirebaseInstanceID: 97ea7a5dca9afd72c79bfcdddb7a44aa1cbb42a1
+  FSCalendar: 3a5ed3636e2ba1b83ebebfcf0c2603105a6f5efe
   GeoFire: e3ae6f4be3f2466c3467ef6c1c203db3af935c59
   GoogleAppMeasurement: 621f3bc6211d5ba548debe01fafad30cf5ab6859
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
@@ -123,7 +133,9 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
 
-PODFILE CHECKSUM: 3fc4e755c21ada245de5026e33ca4c91f3c8ba36
+PODFILE CHECKSUM: 90e679a2927263a0926db4dea040a3271ae9e837
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2

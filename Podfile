@@ -11,5 +11,8 @@ pod 'Firebase/Database'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
+pod 'FSCalendar'
+pod 'SwiftDate'
+pod 'SnapKit'
 
 end
