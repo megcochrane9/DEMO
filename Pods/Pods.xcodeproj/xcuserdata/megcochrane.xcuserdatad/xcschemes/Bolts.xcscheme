@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "33002F009D6140400AA29FD5D05D0E2A"
+               BuildableName = "Bolts.framework"
                BlueprintName = "Bolts"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Bolts.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

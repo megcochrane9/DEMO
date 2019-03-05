@@ -65,6 +65,7 @@ PODS:
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.1)
   - leveldb-library (1.20)
+  - MKRingProgressView (2.2)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -83,6 +84,7 @@ DEPENDENCIES:
   - Firebase/Database
   - FSCalendar
   - GeoFire (from `https://github.com/firebase/geofire-objc.git`)
+  - MKRingProgressView
   - Parse
   - SnapKit
   - SwiftDate
@@ -102,6 +104,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - leveldb-library
+    - MKRingProgressView
     - nanopb
     - Parse
     - SnapKit
@@ -131,11 +134,12 @@ SPEC CHECKSUMS:
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  MKRingProgressView: 6a8eb219f65d1f7ac27ad1986a4f42160b2f7640
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
 
-PODFILE CHECKSUM: 90e679a2927263a0926db4dea040a3271ae9e837
+PODFILE CHECKSUM: ace7f2368ac24b9fe1079920087be246392fe780
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.6.1

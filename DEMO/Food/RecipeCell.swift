@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-class RecepieCell: UICollectionViewCell {
+class RecipeCell: UICollectionViewCell {
   
   lazy var titleLabel: UILabel = {
     return UILabel()

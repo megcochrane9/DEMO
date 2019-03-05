@@ -9,15 +9,15 @@ class FoodViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let a = SubCollectionViewController()
-    a.x = [Receipe(name: "One"), Receipe(name: "Two"), Receipe(name: "Three")]
+    let soup = SubCollectionViewController()
+    soup.x = [Recipe(name: "Butternut Squash and Chill Soup"), Recipe(name: "Two"), Recipe(name: "Three")]
     
-    vcs.append(a)
+    vcs.append(soup)
     
-    let b = SubCollectionViewController()
-    b.x = [Receipe(name: "asfdsg"), Receipe(name: "Tfhfgchjcfgwo"), Receipe(name: "Tdsfhree")]
+    let partyInAPan = SubCollectionViewController()
+    partyInAPan.x = [Recipe(name: "Chicken and Noodles"), Recipe(name: "Tfhfgchjcfgwo"), Recipe(name: "Tdsfhree")]
     
-    vcs = [a, b]
+    vcs = [soup, partyInAPan]
   
     
     for vc in vcs {

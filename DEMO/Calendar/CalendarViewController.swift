@@ -97,24 +97,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate {
 //            Calendar.reloadData()
 //    }
 //
-//        func GetStartDateDayPosition() {
-//            switch Direction {
-//            case 0:
-//                switch currentDay{
-//                case 1...7:
-//                    NumberOfEmptyBox = currentWeekDay - currentDay
-//                case 8...14:
-//                    NumberOfEmptyBox = currentWeekDay - currentDay - 7
-//                case 15...21:
-//                    NumberOfEmptyBox = currentWeekDay - currentDay - 14
-//                case 22...28:
-//                    NumberOfEmptyBox = currentWeekDay - currentDay - 21
-//                case 29...21:
-//                    NumberOfEmptyBox = currentWeekDay - currentDay - 2
-//            default:
-//                break
-//            }
-//
+//      
 //
 //                }
 //        }
