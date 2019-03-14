@@ -24,8 +24,8 @@
 		898BFD36222DA13E00143DF3 /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD35222DA13E00143DF3 /* Fitness.swift */; };
 		898BFD38222DA22C00143DF3 /* FitnessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD37222DA22C00143DF3 /* FitnessCell.swift */; };
 		898BFD3A222DA53B00143DF3 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD39222DA53B00143DF3 /* WorkoutCell.swift */; };
-		898BFD48222E8F9000143DF3 /* PPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD47222E8F8F00143DF3 /* PPViewController.swift */; };
-		898BFD50222E9D1100143DF3 /* PPImageCollectiveViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD4F222E9D1100143DF3 /* PPImageCollectiveViewCell.swift */; };
+		898BFD562231AF1D00143DF3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD552231AF1D00143DF3 /* ImagePicker.swift */; };
+		898BFD582231AF8200143DF3 /* PPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD572231AF8200143DF3 /* PPViewController.swift */; };
 		89BCFF6D220374370091CCA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF6C220374370091CCA6 /* AppDelegate.swift */; };
 		89BCFF6F220374370091CCA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF6E220374370091CCA6 /* LoginViewController.swift */; };
 		89BCFF72220374370091CCA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BCFF70220374370091CCA6 /* Main.storyboard */; };
@@ -57,8 +57,8 @@
 		898BFD35222DA13E00143DF3 /* Fitness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
 		898BFD37222DA22C00143DF3 /* FitnessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessCell.swift; sourceTree = "<group>"; };
 		898BFD39222DA53B00143DF3 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
-		898BFD47222E8F8F00143DF3 /* PPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPViewController.swift; sourceTree = "<group>"; };
-		898BFD4F222E9D1100143DF3 /* PPImageCollectiveViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPImageCollectiveViewCell.swift; sourceTree = "<group>"; };
+		898BFD552231AF1D00143DF3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		898BFD572231AF8200143DF3 /* PPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPViewController.swift; sourceTree = "<group>"; };
 		89BCFF69220374370091CCA6 /* DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BCFF6C220374370091CCA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89BCFF6E220374370091CCA6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -160,15 +160,15 @@
 				27C40C8E220D851900909B9B /* AppContainerViewController.swift */,
 				89BCFFA1220388EC0091CCA6 /* AppManager.swift */,
 				89BCFF70220374370091CCA6 /* Main.storyboard */,
-				898BFD47222E8F8F00143DF3 /* PPViewController.swift */,
-				898BFD4F222E9D1100143DF3 /* PPImageCollectiveViewCell.swift */,
+				898BFD572231AF8200143DF3 /* PPViewController.swift */,
+				898BFD552231AF1D00143DF3 /* ImagePicker.swift */,
+				27ED94C72225875700CA37AC /* CustomerTabBar.swift */,
 				898BFD3D222E7E8D00143DF3 /* Fitness */,
 				898BFD3E222E7EBF00143DF3 /* Food */,
 				898BFD3F222E7EED00143DF3 /* Calendar */,
 				898BFD40222E7F3A00143DF3 /* Activity Rings */,
 				2792DB4D222D75BD00200D37 /* SubCollectionViewController.swift */,
 				898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */,
-				27ED94C72225875700CA37AC /* CustomerTabBar.swift */,
 				89BCFF73220374380091CCA6 /* Assets.xcassets */,
 				89BCFF75220374380091CCA6 /* LaunchScreen.storyboard */,
 				89BCFF78220374380091CCA6 /* Info.plist */,
@@ -333,21 +333,21 @@
 			files = (
 				898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */,
 				2792DB4C222D743300200D37 /* FoodCell.swift in Sources */,
+				898BFD562231AF1D00143DF3 /* ImagePicker.swift in Sources */,
 				2792DB52222D798B00200D37 /* RecipeCell.swift in Sources */,
 				898BFD292225BA9A00143DF3 /* FitnessViewController.swift in Sources */,
-				898BFD48222E8F9000143DF3 /* PPViewController.swift in Sources */,
 				898BFD36222DA13E00143DF3 /* Fitness.swift in Sources */,
 				898BFD38222DA22C00143DF3 /* FitnessCell.swift in Sources */,
 				27ED94CA22258A6200CA37AC /* FoodViewController.swift in Sources */,
 				27ED94C82225875700CA37AC /* CustomerTabBar.swift in Sources */,
 				2792DB50222D783C00200D37 /* Recipe.swift in Sources */,
-				898BFD50222E9D1100143DF3 /* PPImageCollectiveViewCell.swift in Sources */,
 				898BFD3A222DA53B00143DF3 /* WorkoutCell.swift in Sources */,
 				898BFD322227355200143DF3 /* DataCollectionViewCell.swift in Sources */,
 				27C40C8F220D851900909B9B /* AppContainerViewController.swift in Sources */,
 				89BCFF6F220374370091CCA6 /* LoginViewController.swift in Sources */,
 				898BFD2B2226F09700143DF3 /* CalendarViewController.swift in Sources */,
 				89BCFF6D220374370091CCA6 /* AppDelegate.swift in Sources */,
+				898BFD582231AF8200143DF3 /* PPViewController.swift in Sources */,
 				898BFD342227374200143DF3 /* CalendarVars.swift in Sources */,
 				89BCFFA2220388EC0091CCA6 /* AppManager.swift in Sources */,
 				2792DB4E222D75BD00200D37 /* SubCollectionViewController.swift in Sources */,

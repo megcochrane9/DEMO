@@ -1,24 +1,33 @@
 import UIKit
 
-class PPViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
-    var imageArroy = [UIImage(named: "1"),UIImage(named: "1"),UIImage(named: "1")]
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageArroy.count
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PPImageCollectionViewCell", for: indexPath) as! PPImageCollectionViewCell
-        
-        cell.PPImage.image = imageArroy[indexPath.row]
-        
-        return cell
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     
+    
+    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var addImageButton: UIButton!
+    
+    @IBAction func addImageAction(_ sender: UIButton) {
+    
+        let imagePicker = UIImagePickerController()
+        
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        
+        self.present(imagePicker,animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        profilePicture.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage;
+        self.dismiss(animated: true, completion: nil)
+    }
 }
