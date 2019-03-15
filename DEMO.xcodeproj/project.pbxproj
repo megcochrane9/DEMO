@@ -24,7 +24,6 @@
 		898BFD36222DA13E00143DF3 /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD35222DA13E00143DF3 /* Fitness.swift */; };
 		898BFD38222DA22C00143DF3 /* FitnessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD37222DA22C00143DF3 /* FitnessCell.swift */; };
 		898BFD3A222DA53B00143DF3 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD39222DA53B00143DF3 /* WorkoutCell.swift */; };
-		898BFD562231AF1D00143DF3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD552231AF1D00143DF3 /* ImagePicker.swift */; };
 		898BFD582231AF8200143DF3 /* PPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD572231AF8200143DF3 /* PPViewController.swift */; };
 		89BCFF6D220374370091CCA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF6C220374370091CCA6 /* AppDelegate.swift */; };
 		89BCFF6F220374370091CCA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF6E220374370091CCA6 /* LoginViewController.swift */; };
@@ -57,7 +56,6 @@
 		898BFD35222DA13E00143DF3 /* Fitness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
 		898BFD37222DA22C00143DF3 /* FitnessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessCell.swift; sourceTree = "<group>"; };
 		898BFD39222DA53B00143DF3 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
-		898BFD552231AF1D00143DF3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		898BFD572231AF8200143DF3 /* PPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPViewController.swift; sourceTree = "<group>"; };
 		89BCFF69220374370091CCA6 /* DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BCFF6C220374370091CCA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 				89BCFFA1220388EC0091CCA6 /* AppManager.swift */,
 				89BCFF70220374370091CCA6 /* Main.storyboard */,
 				898BFD572231AF8200143DF3 /* PPViewController.swift */,
-				898BFD552231AF1D00143DF3 /* ImagePicker.swift */,
 				27ED94C72225875700CA37AC /* CustomerTabBar.swift */,
 				898BFD3D222E7E8D00143DF3 /* Fitness */,
 				898BFD3E222E7EBF00143DF3 /* Food */,
@@ -333,7 +330,6 @@
 			files = (
 				898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */,
 				2792DB4C222D743300200D37 /* FoodCell.swift in Sources */,
-				898BFD562231AF1D00143DF3 /* ImagePicker.swift in Sources */,
 				2792DB52222D798B00200D37 /* RecipeCell.swift in Sources */,
 				898BFD292225BA9A00143DF3 /* FitnessViewController.swift in Sources */,
 				898BFD36222DA13E00143DF3 /* Fitness.swift in Sources */,
