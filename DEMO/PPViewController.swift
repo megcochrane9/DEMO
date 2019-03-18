@@ -1,10 +1,11 @@
 import UIKit
 import Photos
 
-class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkForSavedName()
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,17 +41,24 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
                     //Text Fields//
     ///////////////////////////////////////////////
     
-    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var weightField: UITextField!
     
+    let defaults = UserDefaults.standard
+        
+    struct Keys {
+        static let name = "name"
+    }
+    
+    
     func configureTextFields() {
-        nameField.delegate = self as? UITextFieldDelegate
+        nameTextField.delegate = self as? UITextFieldDelegate
         weightField.delegate = self as? UITextFieldDelegate
     }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        nameField.resignFirstResponder()
+        nameTextField.resignFirstResponder()
         weightField.resignFirstResponder()
         
     }
@@ -59,14 +67,28 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         textField.resignFirstResponder()
         return true
         
+    }
+    
+    ///////////////////////////////////////////////
+                    //Save Button//
+    ///////////////////////////////////////////////
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+    }
+    
+    func saveName() {
+        defaults.set(nameTextField.text!, forKey: Keys.name)
+            
+        }
+    func checkForSavedName() {
+        let name = defaults.value(forKey: Keys.name) as! String
+            nameTextField.text = name
+        }
+        
     ///////////////////////////////////////////////
             //Personal Progres Photos//
     ///////////////////////////////////////////////
     
   
         }
-    
-}
-
-
 
