@@ -31,7 +31,10 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         profilePicture.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage;
+        profilePicture.layer.cornerRadius = profilePicture.frame.size.height / 2
+        profilePicture.clipsToBounds = true
         self.dismiss(animated: true, completion: nil)
+    
     }
     ///////////////////////////////////////////////
                     //Text Fields//
@@ -60,60 +63,10 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
             //Personal Progres Photos//
     ///////////////////////////////////////////////
     
-    var imageArray = [UIImage]()
-    
-    func grabPhotos() {
-    
-        let imgManager = PHImageManager.default()
-        
-        let requestOptions = PHImageRequestOptions()
-        requestOptions.isSynchronous = true
-        requestOptions.deliveryMode = .highQualityFormat
-        
-        let fetchOptions = PHFetchOptions()
-        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-        
-        if let fetchResult : PHFetchResult = PHAsset.fetchAssets(with: .image, options: fetchOptions) {
-        
-            if fetchResult.count > 0 {
-            
-                for i in 0..<fetchResult.count{
-                
-                imgManager.requestImage(for: fetchResult.object(at: i) , targetSize: CGSize(width: 200, height: 200) , contentMode: .aspectFill , options: requestOptions, resultHandler: {
-                    image, error in
-                    
-                imageArray.append(image!)
-                    
-                })
-            }
-        }
-            
-        else{
-            print("You don't have any images.")
-        }
-}
-
-        func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-            return imageArray.count
-        }
-        
-        func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath)
-            
-            let imageView = cell.viewWithTag(1) as! UIImageView
-            
-            imageView.image = imageArray[indexPath.row]
-            
-            return cell
-
-        }
-    
-   // extension PPViewController : UITextFieldDelegate {}
-        
+  
         }
     
 }
 
 
-}
+
