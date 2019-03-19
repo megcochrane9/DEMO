@@ -1,7 +1,8 @@
 import UIKit
 import Photos
+import UserNotifications
 
-class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let defaults = UserDefaults.standard
     
@@ -94,4 +95,33 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         
 
 }
+    ///////////////////////////////////////////////
+                //Notifcations//
+    ///////////////////////////////////////////////
+    
+    @IBAction func allowNotifications(_ sender: UISwitch) {
+
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge])
+    { (granted, error) in
+    }
+    
+    let content = UNMutableNotificationContent()
+        content.title = "MEGAFIT"
+        content.subtitle = "Hey, I'm a notifcation!"
+        content.body = "Look at me!"
+        content.badge = 1
+    
+    let date = Date().addingTimeInterval(15)
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+    
+    let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+    
+    let uuidString = UUID().uuidString
+    let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+    
+    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        // check the error parameter and handle any errors
+    }
+
 }
+

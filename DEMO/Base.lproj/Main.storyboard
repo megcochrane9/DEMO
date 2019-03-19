@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G5A-Iy-238">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -128,6 +128,7 @@
         <!--PPViewController-->
         <scene sceneID="ZRS-qt-aSS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIc-B6-DTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="PPViewController" id="c45-hI-l8Z" customClass="PPViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UPg-Pa-Mkc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -159,9 +160,14 @@
                                     <action selector="addImageAction:" destination="c45-hI-l8Z" eventType="touchUpInside" id="2mA-0h-UAe"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dzF-2i-Za8">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dzF-2i-Za8">
                                 <rect key="frame" x="301" y="298" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="0.28235294119999998" green="0.2666666667" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="allowNotifications:" destination="c45-hI-l8Z" eventType="valueChanged" id="6BV-Qf-fHG"/>
+                                </connections>
                             </switch>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dM8-4r-4ua" userLabel="Name Field">
                                 <rect key="frame" x="220" y="132" width="97" height="30"/>
@@ -197,7 +203,6 @@
                         <outlet property="weightField" destination="sRF-VB-w3l" id="87Z-QF-h2V"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nIc-B6-DTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4325.6000000000004" y="762.36881559220399"/>
         </scene>
