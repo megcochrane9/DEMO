@@ -5,7 +5,7 @@ class HeightViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = String( Int(sliderOutlet.value) )
-        sliderOutlet.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 2))
+        sliderOutlet.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
     }
 
     override func didReceiveMemoryWarning() {
@@ -18,5 +18,6 @@ class HeightViewController: UIViewController {
     @IBAction func sliderSlid(_ sender: UISlider) {
         label.text = String( Int(sliderOutlet.value) )
     }
+
     
 }

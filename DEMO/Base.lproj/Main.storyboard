@@ -410,11 +410,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="F3S-g9-NRT">
-                                <rect key="frame" x="129" y="318" width="404" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftU-om-KxO">
+                                <rect key="frame" x="115" y="323" width="12" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="F3S-g9-NRT">
+                                <rect key="frame" x="179" y="314" width="369" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="650" id="29r-GW-Ynk"/>
                                 </constraints>
+                                <color key="minimumTrackTintColor" red="0.28235294119999998" green="0.2666666667" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="thumbTintColor" red="0.28235294119999998" green="0.2666666667" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="sliderSlid:" destination="TKA-ba-lqv" eventType="valueChanged" id="mSp-46-mDK"/>
                                 </connections>
@@ -423,6 +433,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="F3S-g9-NRT" firstAttribute="top" secondItem="bVw-nN-XqF" secondAttribute="top" constant="298" id="Afb-Tv-hSo"/>
+                            <constraint firstAttribute="trailing" secondItem="F3S-g9-NRT" secondAttribute="trailing" constant="-156" id="Ej2-7q-6ib"/>
                             <constraint firstItem="bVw-nN-XqF" firstAttribute="bottom" secondItem="F3S-g9-NRT" secondAttribute="bottom" constant="319" id="iEU-5e-RBV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bVw-nN-XqF"/>
