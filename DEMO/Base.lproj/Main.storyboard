@@ -163,26 +163,26 @@
                                 <rect key="frame" x="301" y="298" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dM8-4r-4ua" userLabel="Name Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dM8-4r-4ua" userLabel="Name Field">
                                 <rect key="frame" x="220" y="132" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sRF-VB-w3l" userLabel="Weight Text Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sRF-VB-w3l" userLabel="Weight Field">
                                 <rect key="frame" x="220" y="170" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oU-X7-WPt" customClass="SAButton" customModule="DEMO" customModuleProvider="target">
-                                <rect key="frame" x="251" y="208" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWd-9m-UnI" customClass="SAButton" customModule="DEMO" customModuleProvider="target">
+                                <rect key="frame" x="203" y="208" width="131" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="saveButtonTapped:" destination="c45-hI-l8Z" eventType="touchUpInside" id="G1Y-Oa-aYE"/>
+                                    <action selector="saveButtonTapped:" destination="c45-hI-l8Z" eventType="touchUpInside" id="xS7-Fc-X5K"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -192,9 +192,9 @@
                     <tabBarItem key="tabBarItem" title="Personal Profile" id="7Sp-Yp-V4I"/>
                     <connections>
                         <outlet property="addImageButton" destination="ebC-zq-Qpo" id="Yub-Ra-iCZ"/>
-                        <outlet property="nameField" destination="dM8-4r-4ua" id="LIB-kV-tps"/>
+                        <outlet property="nameField" destination="dM8-4r-4ua" id="i38-9S-IIk"/>
                         <outlet property="profilePicture" destination="zoG-Lb-T78" id="gbC-rC-pYD"/>
-                        <outlet property="weightField" destination="sRF-VB-w3l" id="Z0k-vK-h6V"/>
+                        <outlet property="weightField" destination="sRF-VB-w3l" id="87Z-QF-h2V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIc-B6-DTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -282,18 +282,20 @@
         <!--Home-->
         <scene sceneID="iT7-CR-NkT">
             <objects>
-                <viewController id="k9X-RP-YG2" sceneMemberID="viewController">
+                <viewController id="k9X-RP-YG2" customClass="HomeViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VTA-7O-sNe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBH-XF-yYK">
-                                <rect key="frame" x="142" y="61" width="91" height="42"/>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ncq-Np-mP2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.81258726370000001" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Rsx-vr-P1p"/>
@@ -302,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANk-U8-SXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4326" y="27"/>
+            <point key="canvasLocation" x="4325.6000000000004" y="26.53673163418291"/>
         </scene>
         <!--Customer Tab Bar-->
         <scene sceneID="A33-hw-kcB">

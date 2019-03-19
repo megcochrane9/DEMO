@@ -15,7 +15,8 @@
 		27C40C8F220D851900909B9B /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C40C8E220D851900909B9B /* AppContainerViewController.swift */; };
 		27ED94C82225875700CA37AC /* CustomerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED94C72225875700CA37AC /* CustomerTabBar.swift */; };
 		27ED94CA22258A6200CA37AC /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED94C922258A6200CA37AC /* FoodViewController.swift */; };
-		89361BC8223FD4CE005A21FA /* SAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BC7223FD4CE005A21FA /* SAButton.swift */; };
+		89361BCE2240328C005A21FA /* SAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BCD2240328C005A21FA /* SAButton.swift */; };
+		89361BD022414A0B005A21FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BCF22414A0B005A21FA /* HomeViewController.swift */; };
 		898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */; };
 		898BFD292225BA9A00143DF3 /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD282225BA9A00143DF3 /* FitnessViewController.swift */; };
 		898BFD2B2226F09700143DF3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD2A2226F09700143DF3 /* CalendarViewController.swift */; };
@@ -47,7 +48,8 @@
 		27ED94C72225875700CA37AC /* CustomerTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerTabBar.swift; sourceTree = "<group>"; };
 		27ED94C922258A6200CA37AC /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		4F0C9C554AA990A4BE482265 /* Pods-DEMO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO.release.xcconfig"; path = "Pods/Target Support Files/Pods-DEMO/Pods-DEMO.release.xcconfig"; sourceTree = "<group>"; };
-		89361BC7223FD4CE005A21FA /* SAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAButton.swift; sourceTree = "<group>"; };
+		89361BCD2240328C005A21FA /* SAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAButton.swift; sourceTree = "<group>"; };
+		89361BCF22414A0B005A21FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		898BFD282225BA9A00143DF3 /* FitnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
 		898BFD2A2226F09700143DF3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -159,9 +161,10 @@
 				89BCFF6E220374370091CCA6 /* LoginViewController.swift */,
 				27C40C8E220D851900909B9B /* AppContainerViewController.swift */,
 				89BCFFA1220388EC0091CCA6 /* AppManager.swift */,
+				89361BCF22414A0B005A21FA /* HomeViewController.swift */,
 				89BCFF70220374370091CCA6 /* Main.storyboard */,
 				898BFD572231AF8200143DF3 /* PPViewController.swift */,
-				89361BC7223FD4CE005A21FA /* SAButton.swift */,
+				89361BCD2240328C005A21FA /* SAButton.swift */,
 				27ED94C72225875700CA37AC /* CustomerTabBar.swift */,
 				898BFD3D222E7E8D00143DF3 /* Fitness */,
 				898BFD3E222E7EBF00143DF3 /* Food */,
@@ -333,6 +336,7 @@
 			files = (
 				898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */,
 				2792DB4C222D743300200D37 /* FoodCell.swift in Sources */,
+				89361BD022414A0B005A21FA /* HomeViewController.swift in Sources */,
 				2792DB52222D798B00200D37 /* RecipeCell.swift in Sources */,
 				898BFD292225BA9A00143DF3 /* FitnessViewController.swift in Sources */,
 				898BFD36222DA13E00143DF3 /* Fitness.swift in Sources */,
@@ -340,7 +344,7 @@
 				27ED94CA22258A6200CA37AC /* FoodViewController.swift in Sources */,
 				27ED94C82225875700CA37AC /* CustomerTabBar.swift in Sources */,
 				2792DB50222D783C00200D37 /* Recipe.swift in Sources */,
-				89361BC8223FD4CE005A21FA /* SAButton.swift in Sources */,
+				89361BCE2240328C005A21FA /* SAButton.swift in Sources */,
 				898BFD3A222DA53B00143DF3 /* WorkoutCell.swift in Sources */,
 				898BFD322227355200143DF3 /* DataCollectionViewCell.swift in Sources */,
 				27C40C8F220D851900909B9B /* AppContainerViewController.swift in Sources */,

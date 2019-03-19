@@ -1,11 +1,18 @@
 import UIKit
 import Photos
 
-class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    let defaults = UserDefaults.standard
+    
+    struct Keys {
+        static let personName = "personName"
+        static let personWeight = "personWeight"
+        static let profilePicture = "profilePicture"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkForSavedName()
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,60 +42,56 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         profilePicture.layer.cornerRadius = profilePicture.frame.size.height / 2
         profilePicture.clipsToBounds = true
         self.dismiss(animated: true, completion: nil)
-    
     }
     ///////////////////////////////////////////////
                     //Text Fields//
     ///////////////////////////////////////////////
     
-    @IBOutlet weak var nameTextField: UITextField!
+   
+    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var weightField: UITextField!
     
-    let defaults = UserDefaults.standard
-        
-    struct Keys {
-        static let name = "name"
-    }
-    
-    
     func configureTextFields() {
-        nameTextField.delegate = self as? UITextFieldDelegate
+        nameField.delegate = self as? UITextFieldDelegate
         weightField.delegate = self as? UITextFieldDelegate
     }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        nameTextField.resignFirstResponder()
+        nameField.resignFirstResponder()
         weightField.resignFirstResponder()
         
     }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
         
-    }
-    
     ///////////////////////////////////////////////
-                    //Save Button//
+                   //Save Button//
     ///////////////////////////////////////////////
     
-    @IBAction func saveButtonTapped(_ sender: Any) {
-    }
-    
-    func saveName() {
-        defaults.set(nameTextField.text!, forKey: Keys.name)
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        
             
-        }
-    func checkForSavedName() {
-        let name = defaults.value(forKey: Keys.name) as! String
-            nameTextField.text = name
+        func saveName() {
+            defaults.set(nameField.text!, forKey: Keys.personName)
+    }
+        
+        func checkForSavedName() {
+            let name = defaults.value(forKey: Keys.personName) as? String ?? ""
+            nameField.text = name
+    
+    }
+        func saveWeight() {
+            defaults.set(weightField.text!, forKey: Keys.personWeight)
         }
         
-    ///////////////////////////////////////////////
-            //Personal Progres Photos//
-    ///////////////////////////////////////////////
-    
-  
+        func checkForSavedWeight() {
+            let weight = defaults.value(forKey: Keys.personWeight) as? String ?? ""
+            weightField.text = weight
+            
+    }
+        func saveProfilePicture() {
+            defaults.set(profilePicture.image, forKey: Keys.profilePicture)
         }
+        
 
+}
+}
