@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G5A-Iy-238">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -363,7 +363,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Don't have an account? Sign up!"/>
                                 <connections>
-                                    <segue destination="vc0-Jn-YvO" kind="modal" id="nMt-Nr-0fp"/>
+                                    <segue destination="TKA-ba-lqv" kind="modal" id="Jqt-3b-4c5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -394,6 +394,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yE3-Mu-kA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="96.799999999999997" y="26.53673163418291"/>
+        </scene>
+        <!--Height View Controller-->
+        <scene sceneID="Q9e-e9-qQs">
+            <objects>
+                <viewController id="TKA-ba-lqv" customClass="HeightViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rxe-jq-SBK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns5-YI-BqF">
+                                <rect key="frame" x="65" y="323" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="F3S-g9-NRT">
+                                <rect key="frame" x="129" y="318" width="404" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="650" id="29r-GW-Ynk"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderSlid:" destination="TKA-ba-lqv" eventType="valueChanged" id="mSp-46-mDK"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F3S-g9-NRT" firstAttribute="top" secondItem="bVw-nN-XqF" secondAttribute="top" constant="298" id="Afb-Tv-hSo"/>
+                            <constraint firstItem="bVw-nN-XqF" firstAttribute="bottom" secondItem="F3S-g9-NRT" secondAttribute="bottom" constant="319" id="iEU-5e-RBV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bVw-nN-XqF"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="Ns5-YI-BqF" id="HNW-kM-gXQ"/>
+                        <outlet property="sliderOutlet" destination="F3S-g9-NRT" id="Q2u-fg-MZa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bz4-63-NwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.400000000000006" y="757.87106446776613"/>
         </scene>
         <!--Food-->
         <scene sceneID="IDo-oG-JGj">
