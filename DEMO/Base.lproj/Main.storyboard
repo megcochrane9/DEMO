@@ -191,6 +191,15 @@
                                     <action selector="saveButtonTapped:" destination="c45-hI-l8Z" eventType="touchUpInside" id="xS7-Fc-X5K"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIM-p9-Xda">
+                                <rect key="frame" x="137" y="485" width="100" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="4"/>
+                                <state key="normal" title="Button" image="Add Button"/>
+                                <connections>
+                                    <action selector="buttonStart:" destination="c45-hI-l8Z" eventType="touchUpInside" id="5ka-HA-V2l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.55926966779999998" blue="0.14528623490000001" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="G3M-LK-8yN"/>
@@ -198,6 +207,7 @@
                     <tabBarItem key="tabBarItem" title="Personal Profile" id="7Sp-Yp-V4I"/>
                     <connections>
                         <outlet property="addImageButton" destination="ebC-zq-Qpo" id="Yub-Ra-iCZ"/>
+                        <outlet property="changeImageButton" destination="vIM-p9-Xda" id="Eow-pt-hHf"/>
                         <outlet property="nameField" destination="dM8-4r-4ua" id="i38-9S-IIk"/>
                         <outlet property="profilePicture" destination="zoG-Lb-T78" id="gbC-rC-pYD"/>
                         <outlet property="weightField" destination="sRF-VB-w3l" id="87Z-QF-h2V"/>
@@ -292,20 +302,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ncq-Np-mP2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ncq-Np-mP2">
+                                <rect key="frame" x="0.0" y="134" width="375" height="533"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo final copy" translatesAutoresizingMaskIntoConstraints="NO" id="n02-uR-1N7">
+                                <rect key="frame" x="59" y="-9" width="256" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.81258726370000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ncq-Np-mP2" firstAttribute="top" secondItem="Rsx-vr-P1p" secondAttribute="top" constant="114" id="Qc2-DM-g7f"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rsx-vr-P1p"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="FYl-mV-he7"/>
+                    <connections>
+                        <outlet property="webViewController" destination="Ncq-Np-mP2" id="uoh-6f-mRv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANk-U8-SXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -472,4 +491,8 @@
             <point key="canvasLocation" x="3388" y="-1441"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Add Button" width="1242" height="2208"/>
+        <image name="Logo final copy" width="1024" height="768"/>
+    </resources>
 </document>

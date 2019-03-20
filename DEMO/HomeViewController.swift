@@ -3,6 +3,9 @@ import WebKit
 
 class HomeViewController: UIViewController, WKUIDelegate {
     
+    @IBOutlet weak var webViewController: WKWebView!
+    
+    
     var webView: WKWebView?
     
     override func loadView() {

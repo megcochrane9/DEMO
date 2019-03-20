@@ -122,6 +122,26 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
     UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         // check the error parameter and handle any errors
     }
-
+    ///////////////////////////////////////////////
+                    //Add Button//
+    ///////////////////////////////////////////////
+    
+    var isActive:Bool = false
+    
+    @IBOutlet weak var changeImageButton: UIButton!
+    @IBAction func buttonStart(_ sender: UIButton) {
+        
+        if isActive {
+           isActive = false
+            changeImageButton.setImage(UIImage(named:"Cancel Button"), for: .normal)
+        }
+        
+    else {
+            
+          isActive = true
+            changeImageButton.setImage(UIImage(named:"Add Button"), for: .normal)
+        }
+    }
+    
 }
 
