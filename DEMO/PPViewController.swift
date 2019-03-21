@@ -130,6 +130,12 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     @IBOutlet weak var changeImageButton: UIButton!
     @IBAction func buttonStart(_ sender: UIButton) {
+            
+        changeImageButton.layer.shadowRadius = 4
+        changeImageButton.layer.shadowOffset = CGSize(width: 0, height: 5)
+        changeImageButton.layer.shadowColor = UIColor.darkGray.cgColor
+        changeImageButton.layer.cornerRadius = 8
+        changeImageButton.layer.shadowOpacity = 1
         
         if isActive {
            isActive = false
@@ -141,7 +147,6 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
           isActive = true
             changeImageButton.setImage(UIImage(named:"Add Button"), for: .normal)
         }
-    }
     
 }
-
+}
