@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import Firebase
 
 protocol FoodSelectedDelegate {
   func didSelect(recipe: Recipe)
@@ -29,7 +30,19 @@ class SubCollectionViewController: UIViewController {
     view.addSubview(collectionView)
     addConstraints()
     
-    data = [Recipe(name: "Chicken and Noodles"), Recipe(name: "Tfhfgchjcfgwo"), Recipe(name: "Tdsfhree")]
+    let ref = Firestore.firestore().collection(category)
+    ref.getDocuments { snapshot, error in
+      for document in snapshot!.documents {
+        if let recipe = Recipe(data: document) {
+          self.data.append(recipe)
+        }
+      }
+      self.collectionView.reloadData()
+    }
+    
+    
+    
+    
   }
   
   func addConstraints() {
@@ -51,8 +64,7 @@ extension SubCollectionViewController: UICollectionViewDataSource, UICollectionV
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! RecipeCell
     let recepie = data[indexPath.row]
     cell.titleLabel.text = recepie.name
-    cell.contentView.backgroundColor = .red
-    cell.imageView.image = UIImage(named: "test")
+    cell.imageView.image = recepie.image
     return cell
   }
   
