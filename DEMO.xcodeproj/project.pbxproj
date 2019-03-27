@@ -10,17 +10,24 @@
 		0A59CBF3BE02D8A2B5A57935 /* Pods_DEMO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0603AA5D79752565D96FEFED /* Pods_DEMO.framework */; };
 		2792DB4C222D743300200D37 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792DB4B222D743300200D37 /* FoodCell.swift */; };
 		2792DB4E222D75BD00200D37 /* SubCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792DB4D222D75BD00200D37 /* SubCollectionViewController.swift */; };
-		2792DB50222D783C00200D37 /* Receipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792DB4F222D783C00200D37 /* Receipe.swift */; };
-		2792DB52222D798B00200D37 /* ReceipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792DB51222D798B00200D37 /* ReceipeCell.swift */; };
+		2792DB50222D783C00200D37 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792DB4F222D783C00200D37 /* Recipe.swift */; };
+		2792DB52222D798B00200D37 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792DB51222D798B00200D37 /* RecipeCell.swift */; };
 		27C40C8F220D851900909B9B /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C40C8E220D851900909B9B /* AppContainerViewController.swift */; };
 		27ED94C82225875700CA37AC /* CustomerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED94C72225875700CA37AC /* CustomerTabBar.swift */; };
 		27ED94CA22258A6200CA37AC /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED94C922258A6200CA37AC /* FoodViewController.swift */; };
+		89361BCE2240328C005A21FA /* SAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BCD2240328C005A21FA /* SAButton.swift */; };
+		89361BD022414A0B005A21FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BCF22414A0B005A21FA /* HomeViewController.swift */; };
+		89361BD222415F00005A21FA /* HeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BD122415F00005A21FA /* HeightViewController.swift */; };
 		898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */; };
 		898BFD292225BA9A00143DF3 /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD282225BA9A00143DF3 /* FitnessViewController.swift */; };
 		898BFD2B2226F09700143DF3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD2A2226F09700143DF3 /* CalendarViewController.swift */; };
 		898BFD302226FF6D00143DF3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898BFD2F2226FF6D00143DF3 /* HealthKit.framework */; };
 		898BFD322227355200143DF3 /* DataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD312227355200143DF3 /* DataCollectionViewCell.swift */; };
 		898BFD342227374200143DF3 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD332227374200143DF3 /* CalendarVars.swift */; };
+		898BFD36222DA13E00143DF3 /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD35222DA13E00143DF3 /* Fitness.swift */; };
+		898BFD38222DA22C00143DF3 /* FitnessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD37222DA22C00143DF3 /* FitnessCell.swift */; };
+		898BFD3A222DA53B00143DF3 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD39222DA53B00143DF3 /* WorkoutCell.swift */; };
+		898BFD582231AF8200143DF3 /* PPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD572231AF8200143DF3 /* PPViewController.swift */; };
 		89BCFF6D220374370091CCA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF6C220374370091CCA6 /* AppDelegate.swift */; };
 		89BCFF6F220374370091CCA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCFF6E220374370091CCA6 /* LoginViewController.swift */; };
 		89BCFF72220374370091CCA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BCFF70220374370091CCA6 /* Main.storyboard */; };
@@ -36,12 +43,15 @@
 		13C91D373239DBC1982F5AEF /* Pods-DEMO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DEMO/Pods-DEMO.debug.xcconfig"; sourceTree = "<group>"; };
 		2792DB4B222D743300200D37 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		2792DB4D222D75BD00200D37 /* SubCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCollectionViewController.swift; sourceTree = "<group>"; };
-		2792DB4F222D783C00200D37 /* Receipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipe.swift; sourceTree = "<group>"; };
-		2792DB51222D798B00200D37 /* ReceipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeCell.swift; sourceTree = "<group>"; };
+		2792DB4F222D783C00200D37 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		2792DB51222D798B00200D37 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		27C40C8E220D851900909B9B /* AppContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
 		27ED94C72225875700CA37AC /* CustomerTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerTabBar.swift; sourceTree = "<group>"; };
 		27ED94C922258A6200CA37AC /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		4F0C9C554AA990A4BE482265 /* Pods-DEMO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO.release.xcconfig"; path = "Pods/Target Support Files/Pods-DEMO/Pods-DEMO.release.xcconfig"; sourceTree = "<group>"; };
+		89361BCD2240328C005A21FA /* SAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAButton.swift; sourceTree = "<group>"; };
+		89361BCF22414A0B005A21FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		89361BD122415F00005A21FA /* HeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightViewController.swift; sourceTree = "<group>"; };
 		898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		898BFD282225BA9A00143DF3 /* FitnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
 		898BFD2A2226F09700143DF3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +59,10 @@
 		898BFD2F2226FF6D00143DF3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		898BFD312227355200143DF3 /* DataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectionViewCell.swift; sourceTree = "<group>"; };
 		898BFD332227374200143DF3 /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
+		898BFD35222DA13E00143DF3 /* Fitness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
+		898BFD37222DA22C00143DF3 /* FitnessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessCell.swift; sourceTree = "<group>"; };
+		898BFD39222DA53B00143DF3 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		898BFD572231AF8200143DF3 /* PPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPViewController.swift; sourceTree = "<group>"; };
 		89BCFF69220374370091CCA6 /* DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BCFF6C220374370091CCA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89BCFF6E220374370091CCA6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +97,45 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		898BFD3D222E7E8D00143DF3 /* Fitness */ = {
+			isa = PBXGroup;
+			children = (
+				898BFD282225BA9A00143DF3 /* FitnessViewController.swift */,
+				898BFD37222DA22C00143DF3 /* FitnessCell.swift */,
+				898BFD39222DA53B00143DF3 /* WorkoutCell.swift */,
+				898BFD35222DA13E00143DF3 /* Fitness.swift */,
+			);
+			path = Fitness;
+			sourceTree = "<group>";
+		};
+		898BFD3E222E7EBF00143DF3 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				2792DB4F222D783C00200D37 /* Recipe.swift */,
+				2792DB51222D798B00200D37 /* RecipeCell.swift */,
+				2792DB4B222D743300200D37 /* FoodCell.swift */,
+				27ED94C922258A6200CA37AC /* FoodViewController.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		898BFD3F222E7EED00143DF3 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				898BFD2A2226F09700143DF3 /* CalendarViewController.swift */,
+				898BFD312227355200143DF3 /* DataCollectionViewCell.swift */,
+				898BFD332227374200143DF3 /* CalendarVars.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		898BFD40222E7F3A00143DF3 /* Activity Rings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Activity Rings";
+			sourceTree = "<group>";
+		};
 		89BCFF60220374370091CCA6 = {
 			isa = PBXGroup;
 			children = (
@@ -110,18 +163,18 @@
 				89BCFF6E220374370091CCA6 /* LoginViewController.swift */,
 				27C40C8E220D851900909B9B /* AppContainerViewController.swift */,
 				89BCFFA1220388EC0091CCA6 /* AppManager.swift */,
+				89361BCF22414A0B005A21FA /* HomeViewController.swift */,
 				89BCFF70220374370091CCA6 /* Main.storyboard */,
-				898BFD2A2226F09700143DF3 /* CalendarViewController.swift */,
-				2792DB4F222D783C00200D37 /* Receipe.swift */,
-				2792DB51222D798B00200D37 /* ReceipeCell.swift */,
-				898BFD332227374200143DF3 /* CalendarVars.swift */,
-				898BFD312227355200143DF3 /* DataCollectionViewCell.swift */,
-				27ED94C922258A6200CA37AC /* FoodViewController.swift */,
-				2792DB4D222D75BD00200D37 /* SubCollectionViewController.swift */,
-				2792DB4B222D743300200D37 /* FoodCell.swift */,
-				898BFD282225BA9A00143DF3 /* FitnessViewController.swift */,
-				898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */,
+				89361BD122415F00005A21FA /* HeightViewController.swift */,
+				898BFD572231AF8200143DF3 /* PPViewController.swift */,
+				89361BCD2240328C005A21FA /* SAButton.swift */,
 				27ED94C72225875700CA37AC /* CustomerTabBar.swift */,
+				898BFD3D222E7E8D00143DF3 /* Fitness */,
+				898BFD3E222E7EBF00143DF3 /* Food */,
+				898BFD3F222E7EED00143DF3 /* Calendar */,
+				898BFD40222E7F3A00143DF3 /* Activity Rings */,
+				2792DB4D222D75BD00200D37 /* SubCollectionViewController.swift */,
+				898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */,
 				89BCFF73220374380091CCA6 /* Assets.xcassets */,
 				89BCFF75220374380091CCA6 /* LaunchScreen.storyboard */,
 				89BCFF78220374380091CCA6 /* Info.plist */,
@@ -250,6 +303,7 @@
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
@@ -264,6 +318,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKRingProgressView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
@@ -284,16 +339,23 @@
 			files = (
 				898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */,
 				2792DB4C222D743300200D37 /* FoodCell.swift in Sources */,
-				2792DB52222D798B00200D37 /* ReceipeCell.swift in Sources */,
+				89361BD022414A0B005A21FA /* HomeViewController.swift in Sources */,
+				2792DB52222D798B00200D37 /* RecipeCell.swift in Sources */,
 				898BFD292225BA9A00143DF3 /* FitnessViewController.swift in Sources */,
+				898BFD36222DA13E00143DF3 /* Fitness.swift in Sources */,
+				898BFD38222DA22C00143DF3 /* FitnessCell.swift in Sources */,
 				27ED94CA22258A6200CA37AC /* FoodViewController.swift in Sources */,
 				27ED94C82225875700CA37AC /* CustomerTabBar.swift in Sources */,
-				2792DB50222D783C00200D37 /* Receipe.swift in Sources */,
+				2792DB50222D783C00200D37 /* Recipe.swift in Sources */,
+				89361BCE2240328C005A21FA /* SAButton.swift in Sources */,
+				898BFD3A222DA53B00143DF3 /* WorkoutCell.swift in Sources */,
 				898BFD322227355200143DF3 /* DataCollectionViewCell.swift in Sources */,
 				27C40C8F220D851900909B9B /* AppContainerViewController.swift in Sources */,
+				89361BD222415F00005A21FA /* HeightViewController.swift in Sources */,
 				89BCFF6F220374370091CCA6 /* LoginViewController.swift in Sources */,
 				898BFD2B2226F09700143DF3 /* CalendarViewController.swift in Sources */,
 				89BCFF6D220374370091CCA6 /* AppDelegate.swift in Sources */,
+				898BFD582231AF8200143DF3 /* PPViewController.swift in Sources */,
 				898BFD342227374200143DF3 /* CalendarVars.swift in Sources */,
 				89BCFFA2220388EC0091CCA6 /* AppManager.swift in Sources */,
 				2792DB4E222D75BD00200D37 /* SubCollectionViewController.swift in Sources */,

@@ -43,6 +43,8 @@
 	</array>
 	<key>NSHealthShareUsageDescription</key>
 	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Needs access</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string></string>
 </dict>

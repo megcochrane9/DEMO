@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DF66D92E2FB0468A963667710B0D60E0"
+               BuildableName = "Parse.framework"
                BlueprintName = "Parse"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Parse.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

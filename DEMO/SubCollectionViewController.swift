@@ -3,14 +3,14 @@ import SnapKit
 
 class SubCollectionViewController: UIViewController {
   
-  var x = [Receipe]()
+  var x = [Recipe]()
   
   lazy var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
     layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-    collectionView.register(RecepieCell.self, forCellWithReuseIdentifier: "Cell")
+    collectionView.register(RecipeCell.self, forCellWithReuseIdentifier: "Cell")
     collectionView.backgroundColor = .blue
     return collectionView
   }()
@@ -39,7 +39,7 @@ extension SubCollectionViewController: UICollectionViewDataSource, UICollectionV
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! RecepieCell
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! RecipeCell
     let recepie = x[indexPath.row]
     cell.titleLabel.text = recepie.name
     cell.imageView.image = UIImage(named: "test")
