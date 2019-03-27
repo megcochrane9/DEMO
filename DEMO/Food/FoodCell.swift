@@ -17,10 +17,10 @@ class FoodCell: UICollectionViewCell {
     super.prepareForReuse()
     
     if hostedView?.superview == contentView {
-      hostedView?.removeFromSuperview()
-    } else {
-      print("hostedView is no longer attached to this cell")
-    }
+       hostedView?.removeFromSuperview()
+     } else {
+       print("hostedView is no longer attached to this cell")
+     }
     
     hostedView = nil
   }

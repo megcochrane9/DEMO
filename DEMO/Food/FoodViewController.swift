@@ -9,7 +9,7 @@ class FoodViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let titles = ["soups", "test"]
+    let titles = ["soups", "Party In A Pan", "Pasta", "Lunch Box Ideas", "Baking" ]
     
     for title in titles {
       let vc = SubCollectionViewController()
