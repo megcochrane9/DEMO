@@ -7,7 +7,7 @@ target 'DEMO' do
 use_frameworks!
 
 pod 'Parse'
-pod 'Firebase/Database'
+pod 'Firebase/Firestore'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'

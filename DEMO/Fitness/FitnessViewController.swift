@@ -9,20 +9,8 @@ class FitnessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let abs = SubCollectionViewController()
-        abs.x = [Recipe(name: "10 Minute Core Blast"), Recipe(name: "Two"), Recipe(name: "Three")]
-        
-        vcs.append(abs)
-        
-        let legs = SubCollectionViewController()
-        legs.x = [Recipe(name: "Glute Activation"), Recipe(name: "Tfhfgchjcfgwo"), Recipe(name: "Tdsfhree")]
-        
-        vcs = [abs, legs]
-        
-        
-        for vc in vcs {
-            addChildContentViewController(vc)
-        }
+      
+
         
         
         collectionView.delegate = self
