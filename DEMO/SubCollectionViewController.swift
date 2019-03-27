@@ -42,6 +42,7 @@ extension SubCollectionViewController: UICollectionViewDataSource, UICollectionV
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! RecipeCell
     let recepie = x[indexPath.row]
     cell.titleLabel.text = recepie.name
+    cell.contentView.backgroundColor = .red
     cell.imageView.image = UIImage(named: "test")
     return cell
   }

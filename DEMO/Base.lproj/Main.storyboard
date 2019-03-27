@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G5A-Iy-238">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G5A-Iy-238">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -191,15 +191,6 @@
                                     <action selector="saveButtonTapped:" destination="c45-hI-l8Z" eventType="touchUpInside" id="xS7-Fc-X5K"/>
                                 </connections>
                             </button>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ram-RV-g7H">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="708"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Fpp-BM-4t7">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="708"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIM-p9-Xda">
                                 <rect key="frame" x="157" y="680" width="100" height="155"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -223,36 +214,10 @@
                         <outlet property="changeImageButton" destination="vIM-p9-Xda" id="Eow-pt-hHf"/>
                         <outlet property="nameField" destination="dM8-4r-4ua" id="i38-9S-IIk"/>
                         <outlet property="profilePicture" destination="zoG-Lb-T78" id="gbC-rC-pYD"/>
-                        <outlet property="visualEffectView" destination="Ram-RV-g7H" id="PoJ-rU-DhY"/>
                         <outlet property="weightField" destination="sRF-VB-w3l" id="87Z-QF-h2V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIc-B6-DTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="lhw-Rf-IUp">
-                    <rect key="frame" x="0.0" y="0.0" width="295" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmC-7h-hSm">
-                            <rect key="frame" x="72" y="49" width="46" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccX-fp-ZMb">
-                            <rect key="frame" x="187" y="49" width="46" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1m-i5-fAp">
-                            <rect key="frame" x="124" y="85" width="46" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <action selector="dismissPopUp:" destination="c45-hI-l8Z" eventType="touchUpInside" id="tiM-Ec-OJz"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <viewLayoutGuide key="safeArea" id="9oF-tz-dtj"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="4324.6376811594209" y="762.05357142857144"/>
         </scene>
@@ -307,7 +272,6 @@
         <!--Calendar-->
         <scene sceneID="hjG-G0-gCe">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pIm-mb-pla" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="BPn-6I-Vt3" customClass="CalendarViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eXU-B8-4z8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -331,6 +295,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" id="jyL-5r-0Bk"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pIm-mb-pla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4324.6376811594209" y="1500.6696428571429"/>
         </scene>

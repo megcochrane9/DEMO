@@ -129,13 +129,6 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
-		898BFD40222E7F3A00143DF3 /* Activity Rings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Activity Rings";
-			sourceTree = "<group>";
-		};
 		89BCFF60220374370091CCA6 = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +165,6 @@
 				898BFD3D222E7E8D00143DF3 /* Fitness */,
 				898BFD3E222E7EBF00143DF3 /* Food */,
 				898BFD3F222E7EED00143DF3 /* Calendar */,
-				898BFD40222E7F3A00143DF3 /* Activity Rings */,
 				2792DB4D222D75BD00200D37 /* SubCollectionViewController.swift */,
 				898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */,
 				89BCFF73220374380091CCA6 /* Assets.xcassets */,
