@@ -10,12 +10,12 @@ class FitnessViewController: UIViewController {
         super.viewDidLoad()
         
         let abs = SubCollectionViewController()
-        abs.x = [Recipe(name: "10 Minute Core Blast"), Recipe(name: "Two"), Recipe(name: "Three")]
+        abs.data = [Recipe(name: "10 Minute Core Blast"), Recipe(name: "Two"), Recipe(name: "Three")]
         
         vcs.append(abs)
         
         let legs = SubCollectionViewController()
-        legs.x = [Recipe(name: "Glute Activation"), Recipe(name: "Tfhfgchjcfgwo"), Recipe(name: "Tdsfhree")]
+        legs.data = [Recipe(name: "Glute Activation"), Recipe(name: "Tfhfgchjcfgwo"), Recipe(name: "Tdsfhree")]
         
         vcs = [abs, legs]
         

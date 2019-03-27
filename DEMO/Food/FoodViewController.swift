@@ -9,21 +9,15 @@ class FoodViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let soup = SubCollectionViewController()
-    soup.x = [Recipe(name: "Butternut Squash and Chill Soup"), Recipe(name: "Two"), Recipe(name: "Three")]
+    let titles = ["soup", "partyInAPan"]
     
-    vcs.append(soup)
-    
-    let partyInAPan = SubCollectionViewController()
-    partyInAPan.x = [Recipe(name: "Chicken and Noodles"), Recipe(name: "Tfhfgchjcfgwo"), Recipe(name: "Tdsfhree")]
-    
-    vcs = [soup, partyInAPan]
-  
-    
-    for vc in vcs {
+    for title in titles {
+      let vc = SubCollectionViewController()
+      vc.category = title
       addChildContentViewController(vc)
+      vc.delegate = self
+      vcs.append(vc)
     }
-    
     
     collectionView.delegate = self
     collectionView.dataSource = self
@@ -33,6 +27,13 @@ class FoodViewController: UIViewController {
   private func addChildContentViewController(_ childViewController: UIViewController) {
     addChild(childViewController)
     childViewController.didMove(toParent: self)
+  }
+  
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let desitnationVC = segue.destination as? FoodDetailViewController {
+      desitnationVC.recipe = (sender as! Recipe)
+    }
   }
   
   
@@ -68,6 +69,14 @@ extension FoodViewController: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: view.frame.width, height: 220)
+  }
+  
+}
+
+extension FoodViewController: FoodSelectedDelegate {
+  
+  func didSelect(recipe: Recipe) {
+    performSegue(withIdentifier: "Detail", sender: recipe)
   }
   
 }
