@@ -2,9 +2,9 @@ import Firebase
 
 class Recipe {
   
-  var name: String!
-  var imageName: String?
-  var text: String?
+    var name: String!
+    var imageName: String?
+    var text: String!
   
   lazy var image: UIImage? = {
     guard let imageName = imageName else { return nil }
@@ -17,5 +17,6 @@ class Recipe {
     imageName = data["image"] as? String
     text = data["text"] as? String
   }
-  
+
+    
 }

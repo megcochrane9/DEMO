@@ -42,6 +42,8 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         profilePicture.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage;
         profilePicture.layer.cornerRadius = profilePicture.frame.size.height / 2
         profilePicture.clipsToBounds = true
+        profilePicture.layer.borderWidth = 4.0;
+        profilePicture.layer.borderColor = UIColor.darkGray.cgColor
         self.dismiss(animated: true, completion: nil)
     }
     ///////////////////////////////////////////////

@@ -26,6 +26,7 @@ class WorkoutCell: UICollectionViewCell {
             make.top.equalTo(titleLabel.snp.bottom).offset(4)
             make.left.right.bottom.equalToSuperview().inset(10)
             make.centerX.equalToSuperview()
+            
         }
         
     }

@@ -19,6 +19,7 @@
 		89361BCE2240328C005A21FA /* SAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BCD2240328C005A21FA /* SAButton.swift */; };
 		89361BD022414A0B005A21FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BCF22414A0B005A21FA /* HomeViewController.swift */; };
 		89361BD222415F00005A21FA /* HeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BD122415F00005A21FA /* HeightViewController.swift */; };
+		89361BD8224CE144005A21FA /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BD7224CE144005A21FA /* SectionHeaderView.swift */; };
 		898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */; };
 		898BFD292225BA9A00143DF3 /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD282225BA9A00143DF3 /* FitnessViewController.swift */; };
 		898BFD2B2226F09700143DF3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD2A2226F09700143DF3 /* CalendarViewController.swift */; };
@@ -54,6 +55,7 @@
 		89361BCD2240328C005A21FA /* SAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAButton.swift; sourceTree = "<group>"; };
 		89361BCF22414A0B005A21FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		89361BD122415F00005A21FA /* HeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightViewController.swift; sourceTree = "<group>"; };
+		89361BD7224CE144005A21FA /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		898BFD282225BA9A00143DF3 /* FitnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
 		898BFD2A2226F09700143DF3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				2792DB51222D798B00200D37 /* RecipeCell.swift */,
 				2792DB4B222D743300200D37 /* FoodCell.swift */,
 				27ED94C922258A6200CA37AC /* FoodViewController.swift */,
+				89361BD7224CE144005A21FA /* SectionHeaderView.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				89BCFF6F220374370091CCA6 /* LoginViewController.swift in Sources */,
 				898BFD2B2226F09700143DF3 /* CalendarViewController.swift in Sources */,
 				89BCFF6D220374370091CCA6 /* AppDelegate.swift in Sources */,
+				89361BD8224CE144005A21FA /* SectionHeaderView.swift in Sources */,
 				898BFD582231AF8200143DF3 /* PPViewController.swift in Sources */,
 				898BFD342227374200143DF3 /* CalendarVars.swift in Sources */,
 				89BCFFA2220388EC0091CCA6 /* AppManager.swift in Sources */,

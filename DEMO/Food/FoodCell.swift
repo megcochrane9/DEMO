@@ -1,7 +1,9 @@
 import UIKit
 
 class FoodCell: UICollectionViewCell {
-  
+    
+  var foodCatergories = [FoodCell]()
+    
   var hostedView: UIView? {
     didSet {
       guard let hostedView = hostedView else {
@@ -12,6 +14,9 @@ class FoodCell: UICollectionViewCell {
       contentView.addSubview(hostedView)
     }
   }
+    struct Storyboard {
+        static let sectionHeaderView = "SectionHeaderView"
+    }
   
   override func prepareForReuse() {
     super.prepareForReuse()
@@ -24,5 +29,15 @@ class FoodCell: UICollectionViewCell {
     
     hostedView = nil
   }
-  
+    // section header view//
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
+    {
+        let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Storyboard.sectionHeaderView, for: indexPath) as! SectionHeaderView
+        let category = foodCatergories[indexPath.section]
+        
+        sectionHeaderView.foodCategories = category
+        
+        return sectionHeaderView
+    }
 }
