@@ -62,9 +62,9 @@ extension SubCollectionViewController: UICollectionViewDataSource, UICollectionV
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! RecipeCell
-    let recepie = data[indexPath.row]
-    cell.titleLabel.text = recepie.name
-    cell.imageView.image = recepie.image
+    let recipe = data[indexPath.row]
+    cell.titleLabel.text = recipe.name
+    cell.imageView.image = recipe.image
     return cell
   }
   
@@ -73,8 +73,8 @@ extension SubCollectionViewController: UICollectionViewDataSource, UICollectionV
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    let recepie = data[indexPath.row]
-    delegate?.didSelect(recipe: recepie)
+    let recipe = data[indexPath.row]
+    delegate?.didSelect(recipe: recipe)
   }
   
 }

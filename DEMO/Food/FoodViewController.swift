@@ -3,13 +3,13 @@ import FirebaseDatabase
 
 class FoodViewController: UIViewController {
   
-  @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
   
-  var vcs = [SubCollectionViewController]()
-  var ref: DatabaseReference?
+    var vcs = [SubCollectionViewController]()
+    var ref: DatabaseReference?
 
   
-  override func viewDidLoad() {
+    override func viewDidLoad() {
     super.viewDidLoad()
     
     let titles = ["soups", "Party In A Pan", "Pasta", "Lunch Box Ideas", "Baking" ]
