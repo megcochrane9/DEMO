@@ -116,6 +116,7 @@
 				898BFD282225BA9A00143DF3 /* FitnessViewController.swift */,
 				89361BDB224E433C005A21FA /* SectionHeaderView2.swift */,
 				895F6570224E55720061C316 /* SubCollectionViewController2.swift */,
+				89361BD9224E41BB005A21FA /* FitnessDetailViewController.swift */,
 			);
 			path = Fitness;
 			sourceTree = "<group>";
@@ -129,6 +130,7 @@
 				27ED94C922258A6200CA37AC /* FoodViewController.swift */,
 				89361BD7224CE144005A21FA /* SectionHeaderView.swift */,
 				2792DB4D222D75BD00200D37 /* SubCollectionViewController.swift */,
+				27712418224BCDFE0037E6C7 /* FoodDetailViewController.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -179,8 +181,6 @@
 				898BFD3D222E7E8D00143DF3 /* Fitness */,
 				898BFD3E222E7EBF00143DF3 /* Food */,
 				898BFD3F222E7EED00143DF3 /* Calendar */,
-				27712418224BCDFE0037E6C7 /* FoodDetailViewController.swift */,
-				89361BD9224E41BB005A21FA /* FitnessDetailViewController.swift */,
 				898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */,
 				89BCFF73220374380091CCA6 /* Assets.xcassets */,
 				89BCFF75220374380091CCA6 /* LaunchScreen.storyboard */,
