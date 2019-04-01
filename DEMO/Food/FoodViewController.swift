@@ -5,18 +5,16 @@ class FoodViewController: UIViewController {
   
     @IBOutlet weak var collectionView: UICollectionView!
   
-    var vcs = [SubCollectionViewController]()
+    var vcs = [RecipeSubCollectionViewController]()
     var ref: DatabaseReference?
 
-  
     override func viewDidLoad() {
     super.viewDidLoad()
     
-    let titles = ["soups", "Party In A Pan", "Pasta", "Lunch Box Ideas", "Baking" ]
-    let headerId = "headerId"
+    let titles = ["soups", "Party In A Pan", "Pasta", "Lunch Box Ideas", "Baking"]
     
     for title in titles {
-      let vc = SubCollectionViewController()
+      let vc = RecipeSubCollectionViewController()
       vc.category = title
       addChildContentViewController(vc)
       vc.delegate = self
@@ -26,17 +24,13 @@ class FoodViewController: UIViewController {
     collectionView.delegate = self
     collectionView.dataSource = self
     collectionView.register(FoodCell.self, forCellWithReuseIdentifier: "FoodCell")
-    collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
   }
     
   private func addChildContentViewController(_ childViewController: UIViewController) {
     addChild(childViewController)
     childViewController.didMove(toParent: self)
   }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
-    }
+
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let desitnationVC = segue.destination as? FoodDetailViewController {
@@ -55,7 +49,6 @@ extension FoodViewController: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodCell", for: indexPath) as! FoodCell
-    cell.contentView.backgroundColor = .black
     let vc = vcs[indexPath.row]
     cell.hostedView = vc.view
     return cell
@@ -81,10 +74,10 @@ extension FoodViewController: UICollectionViewDelegateFlowLayout {
   
 }
 
-extension FoodViewController: FoodSelectedDelegate {
+extension FoodViewController: SelectionDelegate {
   
-  func didSelect(recipe: Recipe) {
-    performSegue(withIdentifier: "Detail", sender: recipe)
+  func didSelect(data: Any) {
+    performSegue(withIdentifier: "Detail", sender: data)
   }
   
 }

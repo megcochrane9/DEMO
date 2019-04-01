@@ -2,16 +2,23 @@ import UIKit
 import SnapKit
 import Firebase
 
-protocol FoodSelectedDelegate {
-  func didSelect(recipe: Recipe)
+protocol SelectionDelegate {
+  func didSelect(data: Any)
 }
 
-class SubCollectionViewController: UIViewController {
+class RecipeSubCollectionViewController: UIViewController {
   
   var data = [Recipe]()
   var category: String!
   
-  var delegate: FoodSelectedDelegate?
+  var delegate: SelectionDelegate?
+  
+  lazy var titleLable: UILabel = {
+    let label = UILabel(frame: .zero)
+    label.backgroundColor = .lightGray
+    label.text = category
+    return label
+  }()
   
   lazy var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
@@ -19,17 +26,17 @@ class SubCollectionViewController: UIViewController {
     layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     collectionView.register(RecipeCell.self, forCellWithReuseIdentifier: "Cell")
-    collectionView.backgroundColor = .blue
     return collectionView
   }()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    collectionView.backgroundColor = .white
     collectionView.delegate = self
     collectionView.dataSource = self
     view.addSubview(collectionView)
+    view.addSubview(titleLable)
     addConstraints()
-    
     let ref = Firestore.firestore().collection(category)
     ref.getDocuments { snapshot, error in
       for document in snapshot!.documents {
@@ -46,15 +53,23 @@ class SubCollectionViewController: UIViewController {
   }
   
   func addConstraints() {
+    titleLable.snp.makeConstraints { make in
+      make.top.equalToSuperview()
+      make.left.right.equalToSuperview()
+      make.centerX.equalToSuperview()
+      make.height.equalTo(30)
+    }
+    
     collectionView.snp.makeConstraints { make in
-      make.size.equalToSuperview()
-      make.center.equalToSuperview()
+      make.top.equalTo(titleLable.snp.bottom)
+      make.left.right.bottom.equalToSuperview()
+      make.centerX.equalToSuperview()
     }
   }
   
 }
 
-extension SubCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+extension RecipeSubCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return data.count
@@ -69,12 +84,12 @@ extension SubCollectionViewController: UICollectionViewDataSource, UICollectionV
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: 220, height: view.frame.height)
+    return CGSize(width: 220, height: collectionView.frame.height)
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let recipe = data[indexPath.row]
-    delegate?.didSelect(recipe: recipe)
+    delegate?.didSelect(data: recipe)
   }
   
 }
