@@ -1,15 +1,19 @@
 import UIKit
+import FirebaseDatabase
 
 class FoodViewController: UIViewController {
   
-  @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
   
-  var vcs = [SubCollectionViewController]()
+    var vcs = [SubCollectionViewController]()
+    var ref: DatabaseReference?
+
   
-  override func viewDidLoad() {
+    override func viewDidLoad() {
     super.viewDidLoad()
     
-    let titles = ["soups", "test"]
+    let titles = ["soups", "Party In A Pan", "Pasta", "Lunch Box Ideas", "Baking" ]
+    let headerId = "headerId"
     
     for title in titles {
       let vc = SubCollectionViewController()
@@ -22,13 +26,17 @@ class FoodViewController: UIViewController {
     collectionView.delegate = self
     collectionView.dataSource = self
     collectionView.register(FoodCell.self, forCellWithReuseIdentifier: "FoodCell")
+    collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
   }
-  
+    
   private func addChildContentViewController(_ childViewController: UIViewController) {
     addChild(childViewController)
     childViewController.didMove(toParent: self)
   }
-  
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 50)
+    }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let desitnationVC = segue.destination as? FoodDetailViewController {

@@ -19,6 +19,10 @@
 		89361BCE2240328C005A21FA /* SAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BCD2240328C005A21FA /* SAButton.swift */; };
 		89361BD022414A0B005A21FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BCF22414A0B005A21FA /* HomeViewController.swift */; };
 		89361BD222415F00005A21FA /* HeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BD122415F00005A21FA /* HeightViewController.swift */; };
+		89361BD8224CE144005A21FA /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BD7224CE144005A21FA /* SectionHeaderView.swift */; };
+		89361BDA224E41BB005A21FA /* FitnessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BD9224E41BB005A21FA /* FitnessDetailViewController.swift */; };
+		89361BDC224E433C005A21FA /* SectionHeaderView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BDB224E433C005A21FA /* SectionHeaderView2.swift */; };
+		895F6571224E55720061C316 /* SubCollectionViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F6570224E55720061C316 /* SubCollectionViewController2.swift */; };
 		898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */; };
 		898BFD292225BA9A00143DF3 /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD282225BA9A00143DF3 /* FitnessViewController.swift */; };
 		898BFD2B2226F09700143DF3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD2A2226F09700143DF3 /* CalendarViewController.swift */; };
@@ -54,6 +58,10 @@
 		89361BCD2240328C005A21FA /* SAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAButton.swift; sourceTree = "<group>"; };
 		89361BCF22414A0B005A21FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		89361BD122415F00005A21FA /* HeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightViewController.swift; sourceTree = "<group>"; };
+		89361BD7224CE144005A21FA /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		89361BD9224E41BB005A21FA /* FitnessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessDetailViewController.swift; sourceTree = "<group>"; };
+		89361BDB224E433C005A21FA /* SectionHeaderView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView2.swift; sourceTree = "<group>"; };
+		895F6570224E55720061C316 /* SubCollectionViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCollectionViewController2.swift; sourceTree = "<group>"; };
 		898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		898BFD282225BA9A00143DF3 /* FitnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
 		898BFD2A2226F09700143DF3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -102,10 +110,13 @@
 		898BFD3D222E7E8D00143DF3 /* Fitness */ = {
 			isa = PBXGroup;
 			children = (
-				898BFD282225BA9A00143DF3 /* FitnessViewController.swift */,
-				898BFD37222DA22C00143DF3 /* FitnessCell.swift */,
-				898BFD39222DA53B00143DF3 /* WorkoutCell.swift */,
 				898BFD35222DA13E00143DF3 /* Fitness.swift */,
+				898BFD39222DA53B00143DF3 /* WorkoutCell.swift */,
+				898BFD37222DA22C00143DF3 /* FitnessCell.swift */,
+				898BFD282225BA9A00143DF3 /* FitnessViewController.swift */,
+				89361BDB224E433C005A21FA /* SectionHeaderView2.swift */,
+				895F6570224E55720061C316 /* SubCollectionViewController2.swift */,
+				89361BD9224E41BB005A21FA /* FitnessDetailViewController.swift */,
 			);
 			path = Fitness;
 			sourceTree = "<group>";
@@ -117,6 +128,9 @@
 				2792DB51222D798B00200D37 /* RecipeCell.swift */,
 				2792DB4B222D743300200D37 /* FoodCell.swift */,
 				27ED94C922258A6200CA37AC /* FoodViewController.swift */,
+				89361BD7224CE144005A21FA /* SectionHeaderView.swift */,
+				2792DB4D222D75BD00200D37 /* SubCollectionViewController.swift */,
+				27712418224BCDFE0037E6C7 /* FoodDetailViewController.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -167,8 +181,6 @@
 				898BFD3D222E7E8D00143DF3 /* Fitness */,
 				898BFD3E222E7EBF00143DF3 /* Food */,
 				898BFD3F222E7EED00143DF3 /* Calendar */,
-				2792DB4D222D75BD00200D37 /* SubCollectionViewController.swift */,
-				27712418224BCDFE0037E6C7 /* FoodDetailViewController.swift */,
 				898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */,
 				89BCFF73220374380091CCA6 /* Assets.xcassets */,
 				89BCFF75220374380091CCA6 /* LaunchScreen.storyboard */,
@@ -350,6 +362,7 @@
 				27ED94CA22258A6200CA37AC /* FoodViewController.swift in Sources */,
 				27ED94C82225875700CA37AC /* CustomerTabBar.swift in Sources */,
 				2792DB50222D783C00200D37 /* Recipe.swift in Sources */,
+				89361BDC224E433C005A21FA /* SectionHeaderView2.swift in Sources */,
 				89361BCE2240328C005A21FA /* SAButton.swift in Sources */,
 				898BFD3A222DA53B00143DF3 /* WorkoutCell.swift in Sources */,
 				898BFD322227355200143DF3 /* DataCollectionViewCell.swift in Sources */,
@@ -359,9 +372,12 @@
 				89BCFF6F220374370091CCA6 /* LoginViewController.swift in Sources */,
 				898BFD2B2226F09700143DF3 /* CalendarViewController.swift in Sources */,
 				89BCFF6D220374370091CCA6 /* AppDelegate.swift in Sources */,
+				89361BD8224CE144005A21FA /* SectionHeaderView.swift in Sources */,
 				898BFD582231AF8200143DF3 /* PPViewController.swift in Sources */,
+				895F6571224E55720061C316 /* SubCollectionViewController2.swift in Sources */,
 				898BFD342227374200143DF3 /* CalendarVars.swift in Sources */,
 				89BCFFA2220388EC0091CCA6 /* AppManager.swift in Sources */,
+				89361BDA224E41BB005A21FA /* FitnessDetailViewController.swift in Sources */,
 				2792DB4E222D75BD00200D37 /* SubCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
