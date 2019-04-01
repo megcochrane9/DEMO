@@ -33,7 +33,7 @@ class FitnessViewController: UIViewController {
         childViewController.didMove(toParent: self)
     }
     
-    func collectionView2(_ collectionView2: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: 50)
     }
     
@@ -54,10 +54,10 @@ extension FitnessViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! FitnessCell
-        cell.contentView.backgroundColor = .black
         let vc = vcs[indexPath.row]
         cell.hostedView = vc.view
         return cell
+        
     }
     
     

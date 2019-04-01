@@ -8,6 +8,15 @@ class FitnessSubCollectionViewController: UIViewController {
   var category: String!
   
   var delegate: SelectionDelegate?
+    
+    lazy var titleLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.backgroundColor = .white
+        label.text = category
+        label.font = label.font.withSize(30)
+        label.textColor = .darkGray
+        return label
+    }()
   
   lazy var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
@@ -15,16 +24,17 @@ class FitnessSubCollectionViewController: UIViewController {
     layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     collectionView.register(RecipeCell.self, forCellWithReuseIdentifier: "Cell")
-    collectionView.backgroundColor = .blue
     return collectionView
   }()
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    collectionView.delegate = self
-    collectionView.dataSource = self
-    view.addSubview(collectionView)
-    addConstraints()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        collectionView.backgroundColor = .white
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        view.addSubview(collectionView)
+        view.addSubview(titleLabel)
+        addConstraints()
     
     let ref = Firestore.firestore().collection(category)
     ref.getDocuments { snapshot, error in
@@ -41,15 +51,22 @@ class FitnessSubCollectionViewController: UIViewController {
     
   }
   
-  func addConstraints() {
-    collectionView.snp.makeConstraints { make in
-      make.size.equalToSuperview()
-      make.center.equalToSuperview()
+    func addConstraints() {
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.left.right.equalTo(10)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(50)
+        }
+        
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom)
+            make.left.right.bottom.equalToSuperview()
+            make.centerX.equalToSuperview()
+        }
     }
-  }
-  
+    
 }
-
 extension FitnessSubCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
