@@ -3,12 +3,11 @@ import FirebaseDatabase
 
 class FitnessViewController: UIViewController {
     
-    @IBOutlet weak var collectionView2: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    var vcs = [SubCollectionViewController2]()
+    var vcs = [FitnessSubCollectionViewController]()
     var ref: DatabaseReference?
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,17 +15,17 @@ class FitnessViewController: UIViewController {
         let headerId = "headerId"
         
         for title in titles {
-            let vc = SubCollectionViewController2()
+            let vc = FitnessSubCollectionViewController()
             vc.category = title
             addChildContentViewController(vc)
             vc.delegate = self
             vcs.append(vc)
         }
         
-        collectionView2.delegate = self
-        collectionView2.dataSource = self
-        collectionView2.register(FitnessCell.self, forCellWithReuseIdentifier: "FitnessCell")
-        collectionView2.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(FitnessCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     }
     
     private func addChildContentViewController(_ childViewController: UIViewController) {
@@ -49,12 +48,12 @@ class FitnessViewController: UIViewController {
 
 extension FitnessViewController: UICollectionViewDataSource {
     
-    func collectionView2(_ collectionView2: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return vcs.count
     }
     
-    func collectionView2(_ collectionView2: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView2.dequeueReusableCell(withReuseIdentifier: "FitnessCell", for: indexPath) as! FitnessCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! FitnessCell
         cell.contentView.backgroundColor = .black
         let vc = vcs[indexPath.row]
         cell.hostedView = vc.view
@@ -75,16 +74,16 @@ extension FitnessViewController: UICollectionViewDelegateFlowLayout {
     //
     //  }
     
-    private func collectionView2(_ collectionView2: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView2: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 220)
     }
     
 }
 
-extension FitnessViewController: FitnessSelectedDelegate {
+extension FitnessViewController: SelectionDelegate {
     
-    func didSelect(fitness: Fitness) {
-        performSegue(withIdentifier: "Detail", sender: fitness)
+    func didSelect(data: Any) {
+        performSegue(withIdentifier: "Detail", sender: data)
     }
     
 }

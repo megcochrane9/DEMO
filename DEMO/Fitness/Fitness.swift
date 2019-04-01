@@ -15,5 +15,5 @@ class Fitness {
         name = data["name"] as? String
         imageName = data["image"] as? String
         
-}
+  }
 }

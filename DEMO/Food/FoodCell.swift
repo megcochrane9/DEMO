@@ -1,4 +1,5 @@
 import UIKit
+import SnapKit
 
 class FoodCell: UICollectionViewCell {
     
@@ -9,9 +10,11 @@ class FoodCell: UICollectionViewCell {
       guard let hostedView = hostedView else {
         return
       }
-      
-      hostedView.frame = contentView.bounds
       contentView.addSubview(hostedView)
+      hostedView.snp.makeConstraints { make in
+        make.size.equalToSuperview()
+        make.center.equalToSuperview()
+      }
     }
   }
     struct Storyboard {
