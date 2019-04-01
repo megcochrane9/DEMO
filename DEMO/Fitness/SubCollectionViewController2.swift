@@ -56,6 +56,16 @@ class SubCollectionViewController2: UIViewController {
 
 extension SubCollectionViewController2: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
+    func collectionView2(_ collectionView2: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 220, height: view.frame.height)
+    }
+    
+    func collectionView2(_ collectionView2: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let fitness = data[indexPath.row]
+        delegate?.didSelect(fitness: fitness)
+    }
+    
+    
     func collectionView2(_ collectionView2: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
@@ -66,15 +76,6 @@ extension SubCollectionViewController2: UICollectionViewDataSource, UICollection
         cell.titleLabel.text = fitness.name
         cell.imageView.image = fitness.image
         return cell
-    }
-    
-    func collectionView2(_ collectionView2: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 220, height: view.frame.height)
-    }
-    
-    func collectionView2(_ collectionView2: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let fitness = data[indexPath.row]
-        delegate?.didSelect(fitness: fitness)
     }
     
 }
