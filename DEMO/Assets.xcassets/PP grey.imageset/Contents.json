@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Cancle Button.png",
+      "filename" : "PP grey.png",
       "scale" : "1x"
     },
     {
@@ -17,10 +17,5 @@
   "info" : {
     "version" : 1,
     "author" : "xcode"
-  },
-  "properties" : {
-    "on-demand-resource-tags" : [
-      "New"
-    ]
   }
 }

@@ -64,11 +64,11 @@
             </objects>
             <point key="canvasLocation" x="1575" y="27"/>
         </scene>
-        <!--Fitness-->
+        <!--Navigation Controller-->
         <scene sceneID="qCK-6g-RG4">
             <objects>
                 <navigationController id="llp-ZW-zZN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Fitness" id="hkv-jO-vtR"/>
+                    <tabBarItem key="tabBarItem" title="" id="hkv-jO-vtR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JNF-Ji-JTo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -235,7 +235,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="G3M-LK-8yN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Personal Profile" id="7Sp-Yp-V4I"/>
+                    <tabBarItem key="tabBarItem" title="" id="7Sp-Yp-V4I"/>
                     <connections>
                         <outlet property="addImageButton" destination="ebC-zq-Qpo" id="Yub-Ra-iCZ"/>
                         <outlet property="addItemView" destination="UPg-Pa-Mkc" id="X0v-x2-pzC"/>
@@ -363,13 +363,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uKn-fC-ttt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" id="jyL-5r-0Bk"/>
+                    <tabBarItem key="tabBarItem" title="" id="jyL-5r-0Bk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIm-mb-pla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4324.6376811594209" y="1500.6696428571429"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="iT7-CR-NkT">
             <objects>
                 <viewController id="k9X-RP-YG2" customClass="HomeViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
@@ -405,7 +405,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rsx-vr-P1p"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="FYl-mV-he7"/>
+                    <tabBarItem key="tabBarItem" title="" id="FYl-mV-he7"/>
                     <connections>
                         <outlet property="webViewController" destination="Ncq-Np-mP2" id="uoh-6f-mRv"/>
                     </connections>
@@ -418,10 +418,10 @@
         <scene sceneID="A33-hw-kcB">
             <objects>
                 <tabBarController storyboardIdentifier="MainViewController" id="G5A-Iy-238" customClass="CustomerTabBar" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vCx-6x-qMb">
+                    <tabBar key="tabBar" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vCx-6x-qMb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.28235294119999998" green="0.2666666667" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="jyO-W2-3aB" kind="relationship" relationship="viewControllers" id="6J3-kw-fhq"/>
@@ -555,11 +555,11 @@
             </objects>
             <point key="canvasLocation" x="82.400000000000006" y="757.87106446776613"/>
         </scene>
-        <!--Food-->
+        <!--Navigation Controller-->
         <scene sceneID="IDo-oG-JGj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jyO-W2-3aB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Food" id="cZI-cN-pYZ"/>
+                    <tabBarItem key="tabBarItem" title="" id="cZI-cN-pYZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wc1-Qq-aHj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
