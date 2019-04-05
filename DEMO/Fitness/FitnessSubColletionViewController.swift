@@ -23,7 +23,7 @@ class FitnessSubCollectionViewController: UIViewController {
     layout.scrollDirection = .horizontal
     layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-    collectionView.register(RecipeCell.self, forCellWithReuseIdentifier: "Cell")
+    collectionView.register(WorkoutCell.self, forCellWithReuseIdentifier: "Cell")
     return collectionView
   }()
   
@@ -35,7 +35,6 @@ class FitnessSubCollectionViewController: UIViewController {
         view.addSubview(collectionView)
         view.addSubview(titleLabel)
         addConstraints()
-    
     let ref = Firestore.firestore().collection(category)
     ref.getDocuments { snapshot, error in
       for document in snapshot!.documents {
@@ -74,7 +73,7 @@ extension FitnessSubCollectionViewController: UICollectionViewDataSource, UIColl
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! RecipeCell
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! WorkoutCell
     let fitness = data[indexPath.row]
     cell.titleLabel.text = fitness.name
     cell.imageView.image = fitness.image
@@ -82,7 +81,7 @@ extension FitnessSubCollectionViewController: UICollectionViewDataSource, UIColl
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: 220, height: view.frame.height)
+    return CGSize(width: 220, height: collectionView.frame.height)
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

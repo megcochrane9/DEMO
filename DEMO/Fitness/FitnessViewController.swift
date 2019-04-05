@@ -11,8 +11,7 @@ class FitnessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let titles = ["Cardio"]
-        let headerId = "headerId"
+        let titles = ["Cardio", "Back", "Chest", "Swimming"]
         
         for title in titles {
             let vc = FitnessSubCollectionViewController()
@@ -25,16 +24,11 @@ class FitnessViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(FitnessCell.self, forCellWithReuseIdentifier: "Cell")
-        collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     }
     
     private func addChildContentViewController(_ childViewController: UIViewController) {
         addChild(childViewController)
         childViewController.didMove(toParent: self)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
