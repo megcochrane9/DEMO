@@ -240,6 +240,7 @@
                                 <rect key="frame" x="0.0" y="476" width="414" height="420"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.87540479270000005" green="0.87540479270000005" blue="0.87540479270000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="160" id="8Mf-j8-buh" customClass="ProgressTableViewCell" customModule="DEMO" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="160"/>
@@ -255,15 +256,16 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXz-jO-qDw">
                                                             <rect key="frame" x="35" y="39" width="304" height="51"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.87540479274611394" green="0.87540479274611394" blue="0.87540479274611394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="cardView" destination="elm-TM-3dq" id="qU2-ad-8Zz"/>
                                             <outlet property="titleLabel" destination="BXz-jO-qDw" id="eRk-gT-29b"/>
@@ -271,12 +273,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aE4-S6-bou">
+                                <rect key="frame" x="179" y="737" width="56" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="Button" image="51918"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="G3M-LK-8yN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="7Sp-Yp-V4I"/>
                     <connections>
+                        <outlet property="addButton" destination="aE4-S6-bou" id="Bwl-zV-l7M"/>
                         <outlet property="addImageButton" destination="ebC-zq-Qpo" id="Yub-Ra-iCZ"/>
                         <outlet property="addItemView" destination="UPg-Pa-Mkc" id="X0v-x2-pzC"/>
                         <outlet property="nameField" destination="dM8-4r-4ua" id="i38-9S-IIk"/>
@@ -616,6 +624,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="51918" width="512" height="512"/>
         <image name="Logo final copy" width="1024" height="768"/>
         <image name="PP grey" width="73" height="74"/>
     </resources>

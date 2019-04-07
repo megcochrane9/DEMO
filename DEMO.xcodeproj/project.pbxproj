@@ -27,6 +27,10 @@
 		895F657C225A42DE0061C316 /* ProgressPhotosFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F657B225A42DE0061C316 /* ProgressPhotosFunctions.swift */; };
 		895F657E225A45C70061C316 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F657D225A45C70061C316 /* Data.swift */; };
 		895F6582225A54370061C316 /* ProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F6581225A54370061C316 /* ProgressTableViewCell.swift */; };
+		895F6584225A70110061C316 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F6583225A70110061C316 /* UIViewExtensions.swift */; };
+		895F6586225A745D0061C316 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F6585225A745D0061C316 /* Theme.swift */; };
+		895F6588225A752B0061C316 /* Helvetica.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 895F6587225A752B0061C316 /* Helvetica.ttc */; };
+		895F658A225A77350061C316 /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 895F6589225A77350061C316 /* Colours.xcassets */; };
 		898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */; };
 		898BFD292225BA9A00143DF3 /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD282225BA9A00143DF3 /* FitnessViewController.swift */; };
 		898BFD2B2226F09700143DF3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD2A2226F09700143DF3 /* CalendarViewController.swift */; };
@@ -70,6 +74,10 @@
 		895F657B225A42DE0061C316 /* ProgressPhotosFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPhotosFunctions.swift; sourceTree = "<group>"; };
 		895F657D225A45C70061C316 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		895F6581225A54370061C316 /* ProgressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTableViewCell.swift; sourceTree = "<group>"; };
+		895F6583225A70110061C316 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		895F6585225A745D0061C316 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		895F6587225A752B0061C316 /* Helvetica.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Helvetica.ttc; sourceTree = "<group>"; };
+		895F6589225A77350061C316 /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
 		898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		898BFD282225BA9A00143DF3 /* FitnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
 		898BFD2A2226F09700143DF3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -118,11 +126,15 @@
 		895F6576225A424E0061C316 /* PP */ = {
 			isa = PBXGroup;
 			children = (
+				895F6587225A752B0061C316 /* Helvetica.ttc */,
+				895F6585225A745D0061C316 /* Theme.swift */,
 				898BFD572231AF8200143DF3 /* PPViewController.swift */,
+				895F6583225A70110061C316 /* UIViewExtensions.swift */,
 				895F6579225A42BF0061C316 /* ProgressPhotosModel.swift */,
 				895F657B225A42DE0061C316 /* ProgressPhotosFunctions.swift */,
 				895F657D225A45C70061C316 /* Data.swift */,
 				895F6581225A54370061C316 /* ProgressTableViewCell.swift */,
+				895F6589225A77350061C316 /* Colours.xcassets */,
 			);
 			path = PP;
 			sourceTree = "<group>";
@@ -291,7 +303,9 @@
 				89BCFF77220374380091CCA6 /* LaunchScreen.storyboard in Resources */,
 				89BCFFE3220D82B40091CCA6 /* GoogleService-Info.plist in Resources */,
 				89BCFF74220374380091CCA6 /* Assets.xcassets in Resources */,
+				895F658A225A77350061C316 /* Colours.xcassets in Resources */,
 				89BCFF72220374370091CCA6 /* Main.storyboard in Resources */,
+				895F6588225A752B0061C316 /* Helvetica.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +404,7 @@
 				89361BCE2240328C005A21FA /* SAButton.swift in Sources */,
 				898BFD3A222DA53B00143DF3 /* WorkoutCell.swift in Sources */,
 				898BFD322227355200143DF3 /* DataCollectionViewCell.swift in Sources */,
+				895F6586225A745D0061C316 /* Theme.swift in Sources */,
 				27C40C8F220D851900909B9B /* AppContainerViewController.swift in Sources */,
 				27712419224BCDFE0037E6C7 /* FoodDetailViewController.swift in Sources */,
 				89361BD222415F00005A21FA /* HeightViewController.swift in Sources */,
@@ -401,6 +416,7 @@
 				898BFD582231AF8200143DF3 /* PPViewController.swift in Sources */,
 				273994BF22524BC3002DB5E7 /* FitnessSubColletionViewController.swift in Sources */,
 				898BFD342227374200143DF3 /* CalendarVars.swift in Sources */,
+				895F6584225A70110061C316 /* UIViewExtensions.swift in Sources */,
 				89BCFFA2220388EC0091CCA6 /* AppManager.swift in Sources */,
 				89361BDA224E41BB005A21FA /* FitnessDetailViewController.swift in Sources */,
 				2792DB4E222D75BD00200D37 /* RecipeSubCollectionViewController.swift in Sources */,
