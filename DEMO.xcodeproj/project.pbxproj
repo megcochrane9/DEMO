@@ -23,6 +23,8 @@
 		89361BD8224CE144005A21FA /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BD7224CE144005A21FA /* SectionHeaderView.swift */; };
 		89361BDA224E41BB005A21FA /* FitnessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BD9224E41BB005A21FA /* FitnessDetailViewController.swift */; };
 		89361BDC224E433C005A21FA /* SectionHeaderView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BDB224E433C005A21FA /* SectionHeaderView2.swift */; };
+		895F657A225A42BF0061C316 /* ProgressPhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F6579225A42BF0061C316 /* ProgressPhotosModel.swift */; };
+		895F657C225A42DE0061C316 /* ProgressPhotosFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F657B225A42DE0061C316 /* ProgressPhotosFunctions.swift */; };
 		898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */; };
 		898BFD292225BA9A00143DF3 /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD282225BA9A00143DF3 /* FitnessViewController.swift */; };
 		898BFD2B2226F09700143DF3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD2A2226F09700143DF3 /* CalendarViewController.swift */; };
@@ -62,6 +64,8 @@
 		89361BD7224CE144005A21FA /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		89361BD9224E41BB005A21FA /* FitnessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessDetailViewController.swift; sourceTree = "<group>"; };
 		89361BDB224E433C005A21FA /* SectionHeaderView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView2.swift; sourceTree = "<group>"; };
+		895F6579225A42BF0061C316 /* ProgressPhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPhotosModel.swift; sourceTree = "<group>"; };
+		895F657B225A42DE0061C316 /* ProgressPhotosFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPhotosFunctions.swift; sourceTree = "<group>"; };
 		898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		898BFD282225BA9A00143DF3 /* FitnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
 		898BFD2A2226F09700143DF3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,16 @@
 				4F0C9C554AA990A4BE482265 /* Pods-DEMO.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		895F6576225A424E0061C316 /* PP */ = {
+			isa = PBXGroup;
+			children = (
+				898BFD572231AF8200143DF3 /* PPViewController.swift */,
+				895F6579225A42BF0061C316 /* ProgressPhotosModel.swift */,
+				895F657B225A42DE0061C316 /* ProgressPhotosFunctions.swift */,
+			);
+			path = PP;
 			sourceTree = "<group>";
 		};
 		898BFD3D222E7E8D00143DF3 /* Fitness */ = {
@@ -175,7 +189,7 @@
 				89361BCF22414A0B005A21FA /* HomeViewController.swift */,
 				89BCFF70220374370091CCA6 /* Main.storyboard */,
 				89361BD122415F00005A21FA /* HeightViewController.swift */,
-				898BFD572231AF8200143DF3 /* PPViewController.swift */,
+				895F6576225A424E0061C316 /* PP */,
 				89361BCD2240328C005A21FA /* SAButton.swift */,
 				27ED94C72225875700CA37AC /* CustomerTabBar.swift */,
 				898BFD3D222E7E8D00143DF3 /* Fitness */,
@@ -382,6 +396,8 @@
 				89BCFFA2220388EC0091CCA6 /* AppManager.swift in Sources */,
 				89361BDA224E41BB005A21FA /* FitnessDetailViewController.swift in Sources */,
 				2792DB4E222D75BD00200D37 /* RecipeSubCollectionViewController.swift in Sources */,
+				895F657A225A42BF0061C316 /* ProgressPhotosModel.swift in Sources */,
+				895F657C225A42DE0061C316 /* ProgressPhotosFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
