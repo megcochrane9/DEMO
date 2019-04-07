@@ -25,6 +25,7 @@
 		89361BDC224E433C005A21FA /* SectionHeaderView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BDB224E433C005A21FA /* SectionHeaderView2.swift */; };
 		895F657A225A42BF0061C316 /* ProgressPhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F6579225A42BF0061C316 /* ProgressPhotosModel.swift */; };
 		895F657C225A42DE0061C316 /* ProgressPhotosFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F657B225A42DE0061C316 /* ProgressPhotosFunctions.swift */; };
+		895F657E225A45C70061C316 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895F657D225A45C70061C316 /* Data.swift */; };
 		898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */; };
 		898BFD292225BA9A00143DF3 /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD282225BA9A00143DF3 /* FitnessViewController.swift */; };
 		898BFD2B2226F09700143DF3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD2A2226F09700143DF3 /* CalendarViewController.swift */; };
@@ -66,6 +67,7 @@
 		89361BDB224E433C005A21FA /* SectionHeaderView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView2.swift; sourceTree = "<group>"; };
 		895F6579225A42BF0061C316 /* ProgressPhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPhotosModel.swift; sourceTree = "<group>"; };
 		895F657B225A42DE0061C316 /* ProgressPhotosFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPhotosFunctions.swift; sourceTree = "<group>"; };
+		895F657D225A45C70061C316 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		898BFD26222443A900143DF3 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		898BFD282225BA9A00143DF3 /* FitnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
 		898BFD2A2226F09700143DF3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				898BFD572231AF8200143DF3 /* PPViewController.swift */,
 				895F6579225A42BF0061C316 /* ProgressPhotosModel.swift */,
 				895F657B225A42DE0061C316 /* ProgressPhotosFunctions.swift */,
+				895F657D225A45C70061C316 /* Data.swift */,
 			);
 			path = PP;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */,
+				895F657E225A45C70061C316 /* Data.swift in Sources */,
 				2792DB4C222D743300200D37 /* FoodCell.swift in Sources */,
 				89361BD022414A0B005A21FA /* HomeViewController.swift in Sources */,
 				2792DB52222D798B00200D37 /* RecipeCell.swift in Sources */,
