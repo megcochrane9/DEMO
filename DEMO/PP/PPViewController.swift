@@ -2,7 +2,9 @@ import UIKit
 import Photos
 import UserNotifications
 
-class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource {
+   
+    
     
     let defaults = UserDefaults.standard
     
@@ -127,34 +129,64 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
                     //Add Button//
     ///////////////////////////////////////////////
     
-    var isActive:Bool = false
+  //  var isActive:Bool = false
     
-    @IBOutlet weak var changeImageButton: UIButton!
-    @IBAction func buttonStart(_ sender: UIButton) {
+  //  @IBOutlet weak var changeImageButton: UIButton!
+ //   @IBAction func buttonStart(_ sender: UIButton) {
             
-        changeImageButton.layer.shadowRadius = 4
-        changeImageButton.layer.shadowOffset = CGSize(width: 0, height: 5)
-        changeImageButton.layer.shadowColor = UIColor.darkGray.cgColor
-        changeImageButton.layer.cornerRadius = 8
-        changeImageButton.layer.shadowOpacity = 1
+  //      changeImageButton.layer.shadowRadius = 4
+  //      changeImageButton.layer.shadowOffset = CGSize(width: 0, height: 5)
+  //      changeImageButton.layer.shadowColor = UIColor.darkGray.cgColor
+  //      changeImageButton.layer.cornerRadius = 8
+  //      changeImageButton.layer.shadowOpacity = 1
         
-        if isActive {
-           isActive = false
-            changeImageButton.setImage(UIImage(named:"Cancel Button"), for: .normal)
-        }
+   //     if isActive {
+   //        isActive = false
+   //         changeImageButton.setImage(UIImage(named:"Cancel Button"), for: .normal)
+    //    }
         
-    else {
+  //  else {
             
-          isActive = true
-            changeImageButton.setImage(UIImage(named:"Add Button"), for: .normal)
-        }
+     //     isActive = true
+     //       changeImageButton.setImage(UIImage(named:"Add Button"), for: .normal)
+    //    }
+        
+        ///////////////////////////////////////////////
+        //Table View//
+        ///////////////////////////////////////////////
+
+        
+    @IBOutlet weak var tableView: UITableView!
+    
+    tableView.dataSource = self
+    
+    ProgressPhotosFunctions.readProgressPhotos(completion: { [weak self] in
+        self?.tableView.relaodData()
+    })
+}
+ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return Data.progressPhotosModels.count
+}
+
+ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+    
+    if cell == nil {
+    let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
+    
+        cell.textLabel?.text = Data.progressPhotosModels[indexPath.row].title
+        
+        return cell
+}
+        
+
     ///////////////////////////////////////////////
         //Add button tapped - visual effects//
     ///////////////////////////////////////////////
         
-    }
+
     
-    @IBOutlet var addItemView: UIView!
+  //  @IBOutlet var addItemView: UIView!
   
     
 //    func animateIn() {
@@ -184,16 +216,17 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
 //    }
   
     
-    @IBAction func addItem(_ sender: Any) {
+ //   @IBAction func addItem(_ sender: Any) {
 
       
-    }
+
     
-    @IBAction func dismissPopUp(_ sender: Any) {
+ //   @IBAction func dismissPopUp(_ sender: Any) {
         
         
-    }
+
     
+
+
 
 }
-
