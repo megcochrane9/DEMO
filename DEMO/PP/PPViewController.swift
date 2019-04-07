@@ -2,7 +2,7 @@ import UIKit
 import Photos
 import UserNotifications
 
-class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource {
+class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
    
     
     
@@ -159,6 +159,7 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
     @IBOutlet weak var tableView: UITableView!
     
     tableView.dataSource = self
+    tableView.delegate = self 
     
     ProgressPhotosFunctions.readProgressPhotos(completion: { [weak self] in
         self?.tableView.relaodData()
@@ -169,15 +170,16 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
 }
 
  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ProgressTableViewCell
     
-    if cell == nil {
-    let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
     
-        cell.textLabel?.text = Data.progressPhotosModels[indexPath.row].title
+        cell.setup(progressPhotosModel: Data.progressPhotosModels[indexPath.row])
         
         return cell
 }
+
+ func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+  return 160
         
 
     ///////////////////////////////////////////////
