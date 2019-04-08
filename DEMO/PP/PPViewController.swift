@@ -175,6 +175,17 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
 return tableView
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddProgressSegue" {
+            let popup = segue.destination as! AddProgressViewController
+            popup.doneSaving = { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
+    
 }
 
 extension PPViewController: UITableViewDataSource, UITableViewDelegate {

@@ -2,6 +2,7 @@ import UIKit
 
 class ProgressPhotosFunctions {
     static func createProgressPhoto(progressPhotoModel: ProgressPhotosModel) {
+        Data.progressPhotosModels.append(progressPhotoModel)
 }
     
     static func readProgressPhotos(completion: @escaping () -> ()) {

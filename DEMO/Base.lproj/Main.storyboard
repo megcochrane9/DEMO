@@ -278,7 +278,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="Button" image="51918"/>
                                 <connections>
-                                    <segue destination="9ls-qQ-DPZ" kind="presentation" id="d9k-r9-cxE"/>
+                                    <segue destination="9ls-qQ-DPZ" kind="presentation" identifier="toAddProgressSegue" id="d9k-r9-cxE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -359,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXI-5l-ebX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5037.68115942029" y="756.69642857142856"/>
+            <point key="canvasLocation" x="5038" y="762"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="i7J-uS-mim">
