@@ -2,7 +2,7 @@ import UIKit
 import Photos
 import UserNotifications
 
-class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate {
+class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
    
     
     
@@ -154,14 +154,15 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         ///////////////////////////////////////////////
         //Table View//
         ///////////////////////////////////////////////
-
-
-    weak var tableView: UITableView!
-    weak var addButton: UIButton!
-
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
     
+    weak var tableView: UITableView! {
+    weak var addButton: UIButton!
+    
+    let tableView = UITableView()
+    
+        tableView.dataSource = self
+        tableView.delegate = self
+
     ProgressPhotosFunctions.readProgressPhotos(completion: { [weak self] in
         self?.tableView.reloadData()
     })
@@ -171,17 +172,19 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
     addButton.layer.shadowOpacity = 0.25
     addButton.layer.shadowRadius = 5
     addButton.layer.shadowOffset = CGSize(width: 0, height: 10)
-    
-
+return tableView
+        
+    }
 }
 
-extension PPViewController: UITableViewDataSource {
+extension PPViewController: UITableViewDataSource, UITableViewDelegate {
+
     
  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return Data.progressPhotosModels.count
 }
 
- func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ProgressTableViewCell
     
     
@@ -245,3 +248,4 @@ extension PPViewController: UITableViewDataSource {
 
 }
 }
+
