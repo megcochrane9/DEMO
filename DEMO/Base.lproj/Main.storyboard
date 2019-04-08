@@ -312,6 +312,10 @@
                                 <rect key="frame" x="20" y="64" width="374" height="153"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4m-Kw-R7e">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="153"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJq-ku-CSN">
                                         <rect key="frame" x="8" y="8" width="156" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -342,6 +346,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehX-FV-7BI">
+                                        <rect key="frame" x="217" y="-145" width="244" height="346"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.28235294119999998" green="0.2666666667" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button" image="camera"/>
+                                        <connections>
+                                            <action selector="addPhoto:" destination="9ls-qQ-DPZ" eventType="touchUpInside" id="YK9-uG-nBo"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -352,6 +365,7 @@
                     <connections>
                         <outlet property="cancelButton" destination="Ja0-eg-NIG" id="HxN-jC-pl5"/>
                         <outlet property="dateTextField" destination="s0t-kA-qse" id="yBz-UB-Oyc"/>
+                        <outlet property="imageView" destination="e4m-Kw-R7e" id="GTU-ry-kJT"/>
                         <outlet property="popUpView" destination="as4-Ou-h2f" id="pKX-Si-tvr"/>
                         <outlet property="saveButton" destination="XQL-ab-hDv" id="AcB-ys-iWd"/>
                         <outlet property="titleLabel" destination="TJq-ku-CSN" id="vrf-ef-R1N"/>
@@ -359,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXI-5l-ebX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5038" y="762"/>
+            <point key="canvasLocation" x="5037.68115942029" y="761.38392857142856"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="i7J-uS-mim">
@@ -691,5 +705,6 @@
         <image name="51918" width="512" height="512"/>
         <image name="Logo final copy" width="1024" height="768"/>
         <image name="PP grey" width="73" height="74"/>
+        <image name="camera" width="420" height="595"/>
     </resources>
 </document>
