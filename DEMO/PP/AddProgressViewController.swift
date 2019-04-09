@@ -46,7 +46,7 @@ class AddProgressViewController: UIViewController {
             return
         }
         
-        ProgressPhotosFunctions.createProgressPhoto(progressPhotoModel: ProgressPhotosModel(title: newDate))
+        ProgressPhotosFunctions.createProgressPhoto(progressPhotoModel: ProgressPhotosModel(title: newDate, image: imageView.image))
         
         if let doneSaving = doneSaving {
             doneSaving()
