@@ -25,6 +25,7 @@ class ProgressPhotosFunctions {
         
 }
     
-    static func deleteProgressPhotos(progressPhotoModel: ProgressPhotosModel) {
+    static func deleteProgressPhotos(index: Int) {
+        Data.progressPhotosModels.remove(at: index)
 }
 }

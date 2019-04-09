@@ -206,6 +206,33 @@ extension PPViewController: UITableViewDataSource, UITableViewDelegate {
 
  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
   return 160
+    
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let progress = Data.progressPhotosModels[indexPath.row]
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: @escaping (Bool) -> ()) in
+            
+            let alert = UIAlertController(title: "Delete Progress", message: "Are you sure you want to delete this information: \(progress.title)", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
+                actionPerformed(false)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (alertAction) in
+                //perfrom delete
+                ProgressPhotosFunctions.deleteProgressPhotos(index: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                actionPerformed(true)
+            }))
+            
+            self.present(alert, animated: true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [delete])
+    }
         
 
     ///////////////////////////////////////////////
@@ -258,5 +285,5 @@ extension PPViewController: UITableViewDataSource, UITableViewDelegate {
 
 
 }
-}
+
 
