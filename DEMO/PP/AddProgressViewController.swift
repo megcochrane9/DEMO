@@ -11,6 +11,7 @@ class AddProgressViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var doneSaving: (() -> ())?
+    var progressIndexToEdit: Int?
     
     
     override func viewDidLoad() {
@@ -25,6 +26,12 @@ class AddProgressViewController: UIViewController {
         titleLabel.layer.shadowColor = UIColor.white.cgColor
         titleLabel.layer.shadowOffset = CGSize.zero
         titleLabel.layer.shadowRadius = 5
+        
+        if let index = progressIndexToEdit {
+            let progress = Data.progressPhotosModels[index]
+            dateTextField.text = progress.title
+            imageView.image = progress.image
+        }
         
     }
     
@@ -41,10 +48,13 @@ class AddProgressViewController: UIViewController {
             imageView.contentMode = .scaleAspectFit
             
             dateTextField.rightView = imageView
-            
             dateTextField.rightViewMode = .always
             return
         }
+        
+        if let index = progressIndexToEdit {
+            ProgressPhotosFunctions.updateProgressPhotos(at: index, title: newDate, image: imageView.image)
+        } else {
         
         ProgressPhotosFunctions.createProgressPhoto(progressPhotoModel: ProgressPhotosModel(title: newDate, image: imageView.image))
         
@@ -53,7 +63,7 @@ class AddProgressViewController: UIViewController {
         }
         dismiss(animated: true)
     }
-    
+    }
     
     fileprivate func presentPhotoPickerController() {
         let myPickerController = UIImagePickerController()

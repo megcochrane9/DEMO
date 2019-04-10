@@ -21,7 +21,9 @@ class ProgressPhotosFunctions {
         
 }
 
-    static func updateProgressPhotos(progressPhotoModel: ProgressPhotosModel) {
+    static func updateProgressPhotos(at index: Int, title: String, image: UIImage? = nil) {
+        Data.progressPhotosModels[index].title = title
+        Data.progressPhotosModels[index].image = image
         
 }
     

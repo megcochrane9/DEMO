@@ -363,6 +363,7 @@
                                         <state key="normal" title="Button" image="camera"/>
                                         <connections>
                                             <action selector="addPhoto:" destination="9ls-qQ-DPZ" eventType="touchUpInside" id="YK9-uG-nBo"/>
+                                            <action selector="save:" destination="9ls-qQ-DPZ" eventType="touchUpInside" id="RJC-gr-SGV"/>
                                         </connections>
                                     </button>
                                 </subviews>

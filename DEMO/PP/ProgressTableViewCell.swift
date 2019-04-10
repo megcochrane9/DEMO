@@ -20,12 +20,15 @@ class ProgressTableViewCell: UITableViewCell {
         titleLabel.text = progressPhotosModel.title
         progressImageView.image = progressPhotosModel.image
         
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        if let progressImage = progressPhotosModel.image{
+            progressImageView.alpha = 0.3
+            progressImageView.image = progressImage
+            
+            UIView.animate(withDuration: 1) {
+                self.progressImageView.alpha = 1
+            }
+        }
+        
     }
 
 }

@@ -157,6 +157,7 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     weak var tableView: UITableView! {
     weak var addButton: UIButton!
+        
     
     let tableView = UITableView()
     
@@ -175,10 +176,12 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
 return tableView
         
     }
-    
+    var progressIndexToEdit: Int?
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddProgressSegue" {
             let popup = segue.destination as! AddProgressViewController
+            popup.progressIndexToEdit = self.progressIndexToEdit
             popup.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
@@ -233,7 +236,16 @@ extension PPViewController: UITableViewDataSource, UITableViewDelegate {
         
         return UISwipeActionsConfiguration(actions: [delete])
     }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed: (Bool) -> ()) in
+            self.progressIndexToEdit = indexPath.row
+            self.performSegue(withIdentifier: "toAddProgressSegue", sender: nil)
+            actionPerformed(true)
+        }
         
+        return UISwipeActionsConfiguration(actions: [edit])
+    }
 
     ///////////////////////////////////////////////
         //Add button tapped - visual effects//
