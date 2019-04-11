@@ -48,10 +48,7 @@ class RecipeSubCollectionViewController: UIViewController {
       }
       self.collectionView.reloadData()
     }
-    
-    
-    
-    
+ 
   }
   
   func addConstraints() {
