@@ -215,7 +215,7 @@ return tableView
             self.helpView.alpha = 0
         }) { (success) in
             self.helpView.removeFromSuperview()
-         //   UserDefaults.standard.set(true, forKey: self.seenHelpView)
+            UserDefaults.standard.set(true, forKey: self.seenHelpView)
             
         }
     }
