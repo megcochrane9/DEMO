@@ -31,6 +31,7 @@ class AddProgressViewController: UIViewController {
             let progress = Data.progressPhotosModels[index]
             dateTextField.text = progress.title
             imageView.image = progress.image
+            titleLabel.text = "Edit Date"
         }
         
     }
@@ -67,6 +68,7 @@ class AddProgressViewController: UIViewController {
     
     fileprivate func presentPhotoPickerController() {
         let myPickerController = UIImagePickerController()
+        myPickerController.allowsEditing = true
         myPickerController.delegate = self
         myPickerController.sourceType = .photoLibrary
         self.present(myPickerController, animated: true)
@@ -107,7 +109,11 @@ class AddProgressViewController: UIViewController {
 
 extension AddProgressViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        
+        if let image = info[.editedImage] as? UIImage {
+            self.imageView.image = image
+
+        } else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.imageView.image = image
         }
         

@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -279,6 +280,7 @@
                                             <outlet property="cardView" destination="elm-TM-3dq" id="qU2-ad-8Zz"/>
                                             <outlet property="progressImageView" destination="Apd-Bh-dMk" id="91l-cG-Zhd"/>
                                             <outlet property="titleLabel" destination="BXz-jO-qDw" id="eRk-gT-29b"/>
+                                            <segue destination="uJ6-A9-61E" kind="show" id="X5x-Xb-yLx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -300,6 +302,7 @@
                         <outlet property="addButton" destination="aE4-S6-bou" id="Bwl-zV-l7M"/>
                         <outlet property="addImageButton" destination="ebC-zq-Qpo" id="Yub-Ra-iCZ"/>
                         <outlet property="addItemView" destination="UPg-Pa-Mkc" id="X0v-x2-pzC"/>
+                        <outlet property="helpView" destination="jHa-Xl-QuB" id="DK0-Gh-XKl"/>
                         <outlet property="nameField" destination="dM8-4r-4ua" id="i38-9S-IIk"/>
                         <outlet property="profilePicture" destination="zoG-Lb-T78" id="gbC-rC-pYD"/>
                         <outlet property="tableView" destination="29m-zb-Z54" id="owy-X3-i6l"/>
@@ -307,6 +310,62 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIc-B6-DTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="jHa-Xl-QuB">
+                    <rect key="frame" x="0.0" y="0.0" width="401" height="718"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Kj3-Hk-fHb">
+                        <rect key="frame" x="0.0" y="0.0" width="401" height="718"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eZN-86-YaO">
+                                <rect key="frame" x="18" y="40" width="365" height="392.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe rows for more features!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW1-p5-PdR">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="76.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Delete swipe" translatesAutoresizingMaskIntoConstraints="NO" id="hxl-BK-TCV">
+                                        <rect key="frame" x="0.0" y="84.5" width="365" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="yYI-dd-hrh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Edit swipe" translatesAutoresizingMaskIntoConstraints="NO" id="iKT-m2-ayv">
+                                        <rect key="frame" x="0.0" y="242.5" width="365" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="HHA-WE-XzC"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cal-c1-w7o">
+                                <rect key="frame" x="18" y="624" width="365" height="44"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.2666666667" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3A2-Ff-gUI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeHelpView:" destination="c45-hI-l8Z" eventType="touchUpInside" id="PPi-k0-h3u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="eZN-86-YaO" firstAttribute="leading" secondItem="Kj3-Hk-fHb" secondAttribute="leading" constant="18" id="3w7-Ur-vnw"/>
+                            <constraint firstAttribute="trailing" secondItem="cal-c1-w7o" secondAttribute="trailing" constant="18" id="BrS-ne-BgW"/>
+                            <constraint firstAttribute="bottom" secondItem="cal-c1-w7o" secondAttribute="bottom" constant="50" id="PEM-4H-NHg"/>
+                            <constraint firstAttribute="trailing" secondItem="eZN-86-YaO" secondAttribute="trailing" constant="18" id="ekU-V5-FlS"/>
+                            <constraint firstItem="cal-c1-w7o" firstAttribute="leading" secondItem="Kj3-Hk-fHb" secondAttribute="leading" constant="18" id="oSP-Qe-nbO"/>
+                            <constraint firstItem="eZN-86-YaO" firstAttribute="top" secondItem="Kj3-Hk-fHb" secondAttribute="top" constant="40" id="zEn-Ru-QGm"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
             </objects>
             <point key="canvasLocation" x="4324.6376811594209" y="762.05357142857144"/>
         </scene>
@@ -384,7 +443,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXI-5l-ebX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5037.68115942029" y="761.38392857142856"/>
+            <point key="canvasLocation" x="5241" y="762"/>
+        </scene>
+        <!--Progress Photos View Controller-->
+        <scene sceneID="ZbU-zm-5an">
+            <objects>
+                <viewController id="uJ6-A9-61E" customClass="ProgressPhotosViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rIK-0z-6S5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRm-1X-Lyv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.2666666667" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Progress Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ef-ie-whB">
+                                <rect key="frame" x="88" y="71" width="238" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54p-Wi-IjG">
+                                <rect key="frame" x="188" y="132" width="39" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rAs-wV-2zb" kind="unwind" unwindAction="unwindToPPViewController:" id="1nV-JS-MmB"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hje-kd-nDl">
+                                <rect key="frame" x="0.0" y="186" width="414" height="710"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wsl-K7-YOJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Hje-kd-nDl" id="aNi-RD-fVc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tdu-qg-Vd4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="rAs-wV-2zb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="6156.521739130435" y="761.38392857142856"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="i7J-uS-mim">
@@ -549,7 +656,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANk-U8-SXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4324.6376811594209" y="26.116071428571427"/>
+            <point key="canvasLocation" x="5241" y="26"/>
         </scene>
         <!--Customer Tab Bar-->
         <scene sceneID="A33-hw-kcB">
@@ -714,6 +821,8 @@
     </scenes>
     <resources>
         <image name="51918" width="512" height="512"/>
+        <image name="Delete swipe" width="354" height="128"/>
+        <image name="Edit swipe" width="352" height="126"/>
         <image name="Logo final copy" width="1024" height="768"/>
         <image name="PP grey" width="73" height="74"/>
         <image name="camera" width="420" height="595"/>

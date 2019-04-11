@@ -1,6 +1,6 @@
 import UIKit
 
-class ProgressPhotosModel {
+struct ProgressPhotosModel {
     let id: UUID
     var title: String
     var image: UIImage?

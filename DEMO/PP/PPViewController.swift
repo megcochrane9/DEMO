@@ -155,19 +155,30 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         //Table View//
         ///////////////////////////////////////////////
     
+    @IBOutlet var helpView: UIVisualEffectView!
     weak var tableView: UITableView! {
     weak var addButton: UIButton!
         
     
+   
+    let seenHelpView = "seenHelpView"
     let tableView = UITableView()
     
         tableView.dataSource = self
         tableView.delegate = self
 
-    ProgressPhotosFunctions.readProgressPhotos(completion: { [weak self] in
-        self?.tableView.reloadData()
+    ProgressPhotosFunctions.readProgressPhotos(completion: { [unowned self] in
+        self.tableView.reloadData()
+        
+        if Data.progressPhotosModels.count > 0 {
+        if UserDefaults.standard.bool(forKey: seenHelpView) == false {
+            self.view.addSubview(self.helpView)
+            self.helpView.frame = self.view.frame
+        }
+        }
     })
     
+        
     addButton.backgroundColor = Theme.tint
     addButton.layer.cornerRadius = addButton.frame.height / 2
     addButton.layer.shadowOpacity = 0.25
@@ -176,6 +187,16 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
 return tableView
         
     }
+    
+    @IBAction func unwindToPPViewController(_ unwindSegue: UIStoryboardSegue) {
+    
+    }
+    
+    
+    
+    
+    
+    
     var progressIndexToEdit: Int?
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -185,6 +206,17 @@ return tableView
             popup.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
+            progressIndexToEdit = nil
+        }
+    }
+    
+    @IBAction func closeHelpView(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.helpView.alpha = 0
+        }) { (success) in
+            self.helpView.removeFromSuperview()
+         //   UserDefaults.standard.set(true, forKey: self.seenHelpView)
+            
         }
     }
     
@@ -246,7 +278,15 @@ extension PPViewController: UITableViewDataSource, UITableViewDelegate {
         
         return UISwipeActionsConfiguration(actions: [edit])
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let progress = Data.progressPhotosModels[indexPath.row]
+        let vc = storyboard?.instantiateInitialViewController()!
+        vc.progressId = progress.id
+    }
+    
+    
+ 
     ///////////////////////////////////////////////
         //Add button tapped - visual effects//
     ///////////////////////////////////////////////
@@ -297,5 +337,6 @@ extension PPViewController: UITableViewDataSource, UITableViewDelegate {
 
 
 }
+
 
 

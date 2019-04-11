@@ -18,16 +18,24 @@ class ProgressPhotosFunctions {
             completion()
         }
         
+        func readProgressPhoto(by id:UUID, completion: @escaping (ProgressPhotosModel?) -> ()) {
+            DispatchQueue.global(qos: .userInitiated).async {
+                let progress = Data.progressPhotosModels.first(where: { $0.id == id })
+                DispatchQueue.main.async {
+                    completion(progress)
+            }
+        }
         
 }
 
-    static func updateProgressPhotos(at index: Int, title: String, image: UIImage? = nil) {
+        func updateProgressPhotos(at index: Int, title: String, image: UIImage? = nil) {
         Data.progressPhotosModels[index].title = title
         Data.progressPhotosModels[index].image = image
         
 }
     
-    static func deleteProgressPhotos(index: Int) {
+        func deleteProgressPhotos(index: Int) {
         Data.progressPhotosModels.remove(at: index)
+}
 }
 }
