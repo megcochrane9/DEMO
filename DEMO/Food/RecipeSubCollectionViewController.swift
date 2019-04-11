@@ -13,10 +13,12 @@ class RecipeSubCollectionViewController: UIViewController {
   
   var delegate: SelectionDelegate?
   
-  lazy var titleLable: UILabel = {
+  lazy var titleLabel: UILabel = {
     let label = UILabel(frame: .zero)
-    label.backgroundColor = .lightGray
+    label.backgroundColor = .white
     label.text = category
+    label.font = label.font.withSize(30)
+    label.textColor = .darkGray
     return label
   }()
   
@@ -35,7 +37,7 @@ class RecipeSubCollectionViewController: UIViewController {
     collectionView.delegate = self
     collectionView.dataSource = self
     view.addSubview(collectionView)
-    view.addSubview(titleLable)
+    view.addSubview(titleLabel)
     addConstraints()
     let ref = Firestore.firestore().collection(category)
     ref.getDocuments { snapshot, error in
@@ -53,15 +55,15 @@ class RecipeSubCollectionViewController: UIViewController {
   }
   
   func addConstraints() {
-    titleLable.snp.makeConstraints { make in
+    titleLabel.snp.makeConstraints { make in
       make.top.equalToSuperview()
-      make.left.right.equalToSuperview()
+      make.left.right.equalTo(10)
       make.centerX.equalToSuperview()
-      make.height.equalTo(30)
+      make.height.equalTo(50)
     }
     
     collectionView.snp.makeConstraints { make in
-      make.top.equalTo(titleLable.snp.bottom)
+      make.top.equalTo(titleLabel.snp.bottom)
       make.left.right.bottom.equalToSuperview()
       make.centerX.equalToSuperview()
     }

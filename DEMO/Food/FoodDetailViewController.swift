@@ -10,6 +10,7 @@ class FoodDetailViewController: UIViewController {
     override func viewDidLoad() {
             super.viewDidLoad()
             title = recipe.name
+        
            
     }
   

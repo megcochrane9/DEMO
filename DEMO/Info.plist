@@ -41,10 +41,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Helvetica.ttc</string>
+	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>NSHealthShareUsageDescription</key>
 	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Needs access</string>
+	<string>Use photos to add more detail to your profile. </string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string></string>
 </dict>

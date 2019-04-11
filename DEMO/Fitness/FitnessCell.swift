@@ -10,8 +10,11 @@ class FitnessCell: UICollectionViewCell {
         return
       }
       
-      hostedView.frame = contentView.bounds
-      contentView.addSubview(hostedView)
+        contentView.addSubview(hostedView)
+        hostedView.snp.makeConstraints { make in
+        make.size.equalToSuperview()
+        make.center.equalToSuperview()
+        }
     }
   }
   struct Storyboard {
