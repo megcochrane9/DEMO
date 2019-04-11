@@ -11,7 +11,7 @@ class ProgressPhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ProgressPhotosFunctions.readProgressPhotos(by: progressId) { [weak self] (model) in
+      ProgressPhotosFunctions.readProgressPhoto(by: progressId) { [weak self] model in
             guard let self = self else { return }
             self.progressPhotosModel = model
             

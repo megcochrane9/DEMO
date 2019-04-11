@@ -3,10 +3,21 @@ import Photos
 import UserNotifications
 
 class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-   
-    
-    
-    let defaults = UserDefaults.standard
+  
+  
+  @IBOutlet var helpView: UIVisualEffectView!
+  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var addButton: UIButton!
+  @IBOutlet weak var profilePicture: UIImageView!
+  @IBOutlet weak var addImageButton: UIButton!
+  @IBOutlet weak var nameField: UITextField!
+  @IBOutlet weak var weightField: UITextField!
+  
+  var progressIndexToEdit: Int?
+
+  let seenHelpView = "seenHelpView"
+  
+  let defaults = UserDefaults.standard
     
     struct Keys {
         static let personName = "personName"
@@ -16,19 +27,35 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addButton.backgroundColor = Theme.tint
+        addButton.layer.cornerRadius = addButton.frame.height / 2
+        addButton.layer.shadowOpacity = 0.25
+        addButton.layer.shadowRadius = 5
+        addButton.layer.shadowOffset = CGSize(width: 0, height: 10)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+  
+    override func viewDidAppear(_ animated: Bool) {
+      super.viewDidAppear(animated)
+      
+      ProgressPhotosFunctions.readProgressPhotos(completion: { [unowned self] in
+        self.tableView.reloadData()
+        
+        if Data.progressPhotosModels.count > 0 {
+          if UserDefaults.standard.bool(forKey: self.seenHelpView) == false {
+            self.view.addSubview(self.helpView)
+            self.helpView.frame = self.view.frame
+          }
+        }
+      })
     }
-    
+
+  
+  
     ///////////////////////////////////////////////
                     //Picture//
     ///////////////////////////////////////////////
     
-    @IBOutlet weak var profilePicture: UIImageView!
-    @IBOutlet weak var addImageButton: UIButton!
-    
+
     @IBAction func addImageAction(_ sender: UIButton) {
     
         let imagePicker = UIImagePickerController()
@@ -39,7 +66,7 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         self.present(imagePicker,animated: true, completion: nil)
         
     }
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         profilePicture.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage;
         profilePicture.layer.cornerRadius = profilePicture.frame.size.height / 2
@@ -48,19 +75,17 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         profilePicture.layer.borderColor = UIColor.darkGray.cgColor
         self.dismiss(animated: true, completion: nil)
     }
+
     ///////////////////////////////////////////////
                     //Text Fields//
     ///////////////////////////////////////////////
-    
-   
-    @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var weightField: UITextField!
+  
     
     func configureTextFields() {
         nameField.delegate = self as? UITextFieldDelegate
         weightField.delegate = self as? UITextFieldDelegate
     }
-    
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         nameField.resignFirstResponder()
@@ -72,59 +97,58 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
                    //Save Button//
     ///////////////////////////////////////////////
     
-    @IBAction func saveButtonTapped(_ sender: UIButton) {
-        
-            
-        func saveName() {
-            defaults.set(nameField.text!, forKey: Keys.personName)
-    }
-        
-        func checkForSavedName() {
-            let name = defaults.value(forKey: Keys.personName) as? String ?? ""
-            nameField.text = name
-    
-    }
-        func saveWeight() {
-            defaults.set(weightField.text!, forKey: Keys.personWeight)
-        }
-        
-        func checkForSavedWeight() {
-            let weight = defaults.value(forKey: Keys.personWeight) as? String ?? ""
-            weightField.text = weight
-            
-    }
-        func saveProfilePicture() {
-            defaults.set(profilePicture.image, forKey: Keys.profilePicture)
-        }
-        
-}
+//    @IBAction func saveButtonTapped(_ sender: UIButton) {
+//
+//
+//        func saveName() {
+//            defaults.set(nameField.text!, forKey: Keys.personName)
+//    }
+//
+//        func checkForSavedName() {
+//            let name = defaults.value(forKey: Keys.personName) as? String ?? ""
+//            nameField.text = name
+//
+//    }
+//        func saveWeight() {
+//            defaults.set(weightField.text!, forKey: Keys.personWeight)
+//        }
+//
+//        func checkForSavedWeight() {
+//            let weight = defaults.value(forKey: Keys.personWeight) as? String ?? ""
+//            weightField.text = weight
+//
+//    }
+//        func saveProfilePicture() {
+//            defaults.set(profilePicture.image, forKey: Keys.profilePicture)
+//        }
+//
+//  }
     ///////////////////////////////////////////////
                 //Notifcations//
     ///////////////////////////////////////////////
     
     @IBAction func allowNotifications(_ sender: UISwitch) {
 
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge])
-    { (granted, error) in
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in }
     }
     
-    let content = UNMutableNotificationContent()
-        content.title = "MEGAFIT"
-        content.subtitle = "Hey, I'm a notifcation!"
-        content.body = "Look at me!"
-        content.badge = 1
-    
-    let date = Date().addingTimeInterval(15)
-        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
-    
-    let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-    
-    let uuidString = UUID().uuidString
-    let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
-    
-    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        // check the error parameter and handle any errors
-    }
+//    let content = UNMutableNotificationContent()
+//        content.title = "MEGAFIT"
+//        content.subtitle = "Hey, I'm a notifcation!"
+//        content.body = "Look at me!"
+//        content.badge = 1
+//
+//    let date = Date().addingTimeInterval(15)
+//    let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+//
+//    let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+//
+//    let uuidString = UUID().uuidString
+//    let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+//
+//    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+//        // check the error parameter and handle any errors
+//    }
     ///////////////////////////////////////////////
                     //Add Button//
     ///////////////////////////////////////////////
@@ -155,50 +179,17 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         //Table View//
         ///////////////////////////////////////////////
     
-    @IBOutlet var helpView: UIVisualEffectView!
-    weak var tableView: UITableView! {
-    weak var addButton: UIButton!
         
-    
-   
-    let seenHelpView = "seenHelpView"
-    let tableView = UITableView()
-    
-        tableView.dataSource = self
-        tableView.delegate = self
 
-    ProgressPhotosFunctions.readProgressPhotos(completion: { [unowned self] in
-        self.tableView.reloadData()
         
-        if Data.progressPhotosModels.count > 0 {
-        if UserDefaults.standard.bool(forKey: seenHelpView) == false {
-            self.view.addSubview(self.helpView)
-            self.helpView.frame = self.view.frame
-        }
-        }
-    })
-    
-        
-    addButton.backgroundColor = Theme.tint
-    addButton.layer.cornerRadius = addButton.frame.height / 2
-    addButton.layer.shadowOpacity = 0.25
-    addButton.layer.shadowRadius = 5
-    addButton.layer.shadowOffset = CGSize(width: 0, height: 10)
-return tableView
-        
-    }
+  
     
     @IBAction func unwindToPPViewController(_ unwindSegue: UIStoryboardSegue) {
     
     }
     
     
-    
-    
-    
-    
-    var progressIndexToEdit: Int?
-
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddProgressSegue" {
             let popup = segue.destination as! AddProgressViewController
@@ -208,6 +199,13 @@ return tableView
             }
             progressIndexToEdit = nil
         }
+      
+      if segue.identifier == "Segue name" {
+        let destinationViewController = segue.destination as! ProgressPhotosViewController
+        let progress = sender as! ProgressPhotosModel
+        destinationViewController.progressId = progress.id
+      }
+      
     }
     
     @IBAction func closeHelpView(_ sender: UIButton) {
@@ -222,6 +220,11 @@ return tableView
     
     
 }
+
+
+
+
+
 
 extension PPViewController: UITableViewDataSource, UITableViewDelegate {
 
@@ -281,8 +284,7 @@ extension PPViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let progress = Data.progressPhotosModels[indexPath.row]
-        let vc = storyboard?.instantiateInitialViewController()!
-        vc.progressId = progress.id
+        performSegue(withIdentifier: "Segue name", sender: progress)
     }
     
     
@@ -330,11 +332,6 @@ extension PPViewController: UITableViewDataSource, UITableViewDelegate {
     
  //   @IBAction func dismissPopUp(_ sender: Any) {
         
-        
-
-    
-
-
 
 }
 
