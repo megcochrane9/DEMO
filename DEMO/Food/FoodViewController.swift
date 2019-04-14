@@ -6,7 +6,6 @@ class FoodViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
   
     var vcs = [RecipeSubCollectionViewController]()
-    var ref: DatabaseReference?
 
     override func viewDidLoad() {
     super.viewDidLoad()

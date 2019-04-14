@@ -8,14 +8,14 @@ class RecipeCell: UICollectionViewCell {
   }()
   
   lazy var imageView: UIImageView = {
-    return UIImageView()
+    let imageView = UIImageView()
+    imageView.contentMode = .scaleAspectFill
+    return imageView
   }()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    contentView.addSubview(titleLabel)
-    contentView.addSubview(imageView)
-    
+    contentView.add(subviews:[titleLabel, imageView])
     titleLabel.snp.makeConstraints { make in
       make.left.right.top.equalToSuperview()
       make.centerX.equalToSuperview()
@@ -26,6 +26,7 @@ class RecipeCell: UICollectionViewCell {
       make.top.equalTo(titleLabel.snp.bottom).offset(4)
       make.left.right.bottom.equalToSuperview().inset(10)
       make.centerX.equalToSuperview()
+
       imageView.layer.cornerRadius = 30.0
       imageView.layer.masksToBounds = true
     }

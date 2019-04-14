@@ -4,6 +4,7 @@ class Recipe {
   
     var name: String!
     var imageName: String?
+    var body: String!
   
   lazy var image: UIImage? = {
     guard let imageName = imageName else { return nil }
@@ -14,7 +15,7 @@ class Recipe {
     guard let data = data.data() else { return nil }
     name = data["name"] as? String
     imageName = data["image"] as? String
-
+    body = data["body"] as? String
   }
 
     
