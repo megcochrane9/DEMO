@@ -37,6 +37,9 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
   
     override func viewDidAppear(_ animated: Bool) {
       super.viewDidAppear(animated)
+        
+        tableView.dataSource = self
+        tableView.delegate = self 
       
       ProgressPhotosFunctions.readProgressPhotos(completion: { [unowned self] in
         self.tableView.reloadData()
@@ -216,21 +219,22 @@ extension PPViewController: UITableViewDataSource, UITableViewDelegate {
     
  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return Data.progressPhotosModels.count
-}
+ }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ProgressTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ProgressTableViewCell
     
-    
+        
         cell.setup(progressPhotosModel: Data.progressPhotosModels[indexPath.row])
         
         return cell
-}
+        
+    }
 
  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
   return 160
     
-    }
+ }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         

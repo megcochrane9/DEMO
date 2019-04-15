@@ -5,7 +5,8 @@ class ProfileHeaderView: UIView {
     
     lazy var titleLable: UILabel = {
         let view = UILabel()
-        view.text = "Profile"
+        view.text = "PROFILE"
+        view.textColor = UIColor.white
         return view
     }()
     
@@ -32,7 +33,7 @@ class ProfileHeaderView: UIView {
     }
     
     private func commonInit() {
-        backgroundColor = .lightGray
+        self.backgroundColor = UIColor(red: 0.45, green: 0.1, blue: 1.0, alpha: 1)
         add(subviews: [titleLable, imageView])
         addConstraints()
     }
