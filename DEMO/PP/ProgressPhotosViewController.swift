@@ -11,7 +11,7 @@ class ProgressPhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      ProgressPhotosFunctions.readProgressPhoto(by: progressId) { [weak self] model in
+        ProgressPhotosFunctions.readProgressPhoto(by: progressId) { [weak self] (model) in
             guard let self = self else { return }
             self.progressPhotosModel = model
             
@@ -20,7 +20,10 @@ class ProgressPhotosViewController: UIViewController {
             self.backgroundImageView.image = model.image
         }
         
+      }
         
+    
+    @IBAction func back(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
 }
-

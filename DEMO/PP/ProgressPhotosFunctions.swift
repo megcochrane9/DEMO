@@ -20,9 +20,11 @@ class ProgressPhotosFunctions {
     }
   }
 
-  static func readProgressPhoto(by id:UUID, completion: @escaping (ProgressPhotosModel?) -> ()) {
+  static func readProgressPhoto(by id: UUID, completion: @escaping (ProgressPhotosModel?) -> ()) {
+    
     DispatchQueue.global(qos: .userInitiated).async {
       let progress = Data.progressPhotosModels.first(where: { $0.id == id })
+        
       DispatchQueue.main.async {
         completion(progress)
       }

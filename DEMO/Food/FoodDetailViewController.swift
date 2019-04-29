@@ -6,13 +6,16 @@ class FoodDetailViewController: UIViewController {
     var recipe: Recipe!
     var text: String!
     var body: String!
+    var image: UIImage!
     
 
-    @IBOutlet weak var dataView: UIView!
+    @IBOutlet weak var foodImage: UIImageView!
+    
     
     override func viewDidLoad() {
             super.viewDidLoad()
             title = recipe.name
+
         
     }
   
@@ -21,12 +24,6 @@ class FoodDetailViewController: UIViewController {
         view.image = UIImage(named: "PP grey")
         return view
     }()
-    
-    var image: UIImage? {
-        didSet {
-            imageView.image = image
-        }
-    }
     
     
     

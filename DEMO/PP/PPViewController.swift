@@ -71,14 +71,14 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         
     }
 
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        profilePicture.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage;
-//        profilePicture.layer.cornerRadius = profilePicture.frame.size.height / 2
-//        profilePicture.clipsToBounds = true
-//        profilePicture.layer.borderWidth = 4.0;
-//        profilePicture.layer.borderColor = UIColor.darkGray.cgColor
-//        self.dismiss(animated: true, completion: nil)
-//    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        profilePicture.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage;
+        profilePicture.layer.cornerRadius = profilePicture.frame.size.height / 2
+        profilePicture.clipsToBounds = true
+        profilePicture.layer.borderWidth = 4.0;
+        profilePicture.layer.borderColor = UIColor.darkGray.cgColor
+        self.dismiss(animated: true, completion: nil)
+    }
 
     ///////////////////////////////////////////////
                     //Text Fields//
@@ -101,32 +101,31 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
                    //Save Button//
     ///////////////////////////////////////////////
     
-//    @IBAction func saveButtonTapped(_ sender: UIButton) {
-//
-//
-//        func saveName() {
-//            defaults.set(nameField.text!, forKey: Keys.personName)
-//    }
-//
-//        func checkForSavedName() {
-//            let name = defaults.value(forKey: Keys.personName) as? String ?? ""
-//            nameField.text = name
-//
-//    }
-//        func saveWeight() {
-//            defaults.set(weightField.text!, forKey: Keys.personWeight)
-//        }
-//
-//        func checkForSavedWeight() {
-//            let weight = defaults.value(forKey: Keys.personWeight) as? String ?? ""
-//            weightField.text = weight
-//
-//    }
-//        func saveProfilePicture() {
-//            defaults.set(profilePicture.image, forKey: Keys.profilePicture)
-//        }
-//
-//  }
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+
+
+        func saveName() {
+            defaults.set(nameField.text!, forKey: Keys.personName)
+    }
+
+        func checkForSavedName() {
+            let name = defaults.value(forKey: Keys.personName) as? String ?? ""
+            nameField.text = name
+
+    }
+        func saveWeight() {
+            defaults.set(weightField.text!, forKey: Keys.personWeight)
+        }
+
+        func checkForSavedWeight() {
+            let weight = defaults.value(forKey: Keys.personWeight) as? String ?? ""
+            weightField.text = weight
+
+    }
+        func saveProfilePicture() {
+            defaults.set(profilePicture.image, forKey: Keys.profilePicture)
+        }
+  }
     ///////////////////////////////////////////////
                 //Notifcations//
     ///////////////////////////////////////////////
@@ -137,32 +136,7 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         // check the error parameter and handle any errors
     
     }
-    ///////////////////////////////////////////////
-                    //Add Button//
-    ///////////////////////////////////////////////
-    
-  //  var isActive:Bool = false
-    
-  //  @IBOutlet weak var changeImageButton: UIButton!
- //   @IBAction func buttonStart(_ sender: UIButton) {
-            
-  //      changeImageButton.layer.shadowRadius = 4
-  //      changeImageButton.layer.shadowOffset = CGSize(width: 0, height: 5)
-  //      changeImageButton.layer.shadowColor = UIColor.darkGray.cgColor
-  //      changeImageButton.layer.cornerRadius = 8
-  //      changeImageButton.layer.shadowOpacity = 1
-        
-   //     if isActive {
-   //        isActive = false
-   //         changeImageButton.setImage(UIImage(named:"Cancel Button"), for: .normal)
-    //    }
-        
-  //  else {
-            
-     //     isActive = true
-     //       changeImageButton.setImage(UIImage(named:"Add Button"), for: .normal)
-    //    }
-        
+   
         ///////////////////////////////////////////////
         //Table View//
         ///////////////////////////////////////////////
@@ -273,7 +247,12 @@ extension PPViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let progress = Data.progressPhotosModels[indexPath.row]
-        performSegue(withIdentifier: "Segue name", sender: progress)
+        
+        let storyboard = UIStoryboard(name: String(describing: ProgressPhotosViewController.self), bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! ProgressPhotosViewController
+        vc.progressId = progress.id
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     

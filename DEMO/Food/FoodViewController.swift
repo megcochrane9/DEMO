@@ -52,7 +52,7 @@ extension FoodViewController: UICollectionViewDataSource {
     cell.hostedView = vc.view
     return cell
   }
-  
+     
   
 }
 
@@ -78,5 +78,7 @@ extension FoodViewController: SelectionDelegate {
   func didSelect(data: Any) {
     performSegue(withIdentifier: "Detail", sender: data)
   }
+    
+    
   
 }

@@ -32,7 +32,7 @@ class FoodCell: UICollectionViewCell {
     
     hostedView = nil
   }
-    // section header view//
+    // section header view //
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
     {
