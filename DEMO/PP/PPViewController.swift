@@ -255,51 +255,6 @@ extension PPViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
-    
- 
-    ///////////////////////////////////////////////
-        //Add button tapped - visual effects//
-    ///////////////////////////////////////////////
-        
-
-    
-  //  @IBOutlet var addItemView: UIView!
-  
-    
-//    func animateIn() {
-//        self.view.addSubview(addItemView)
-//        addItemView.center = self.view.center
-//
-//        addItemView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-//        addItemView.alpha = 0
-//
-//        UIView.animate(withDuration: 0.4){
-//           self.visualEffectView.effect = self.effect
-//           self.addItemView.alpha = 1
-//           self.addItemView.transform = CGAffineTransform.identity
-//        }
-//    }
-//
-//    func animateOut(){
-//        UIView.animate(withDuration: 0.3, animations: {
-//            self.addItemView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-//            self.addItemView.alpha = 0
-//
-//            self.visualEffectView.effect = nil
-//
-//        }) { (success:Bool) in
-//            self.addItemView.removeFromSuperview()
-//        }
-//    }
-  
-    
- //   @IBAction func addItem(_ sender: Any) {
-
-      
-
-    
- //   @IBAction func dismissPopUp(_ sender: Any) {
-        
 
 }
 

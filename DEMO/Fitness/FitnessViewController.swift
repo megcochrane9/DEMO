@@ -64,9 +64,7 @@ extension FitnessViewController: UICollectionViewDelegate {
 
 extension FitnessViewController: UICollectionViewDelegateFlowLayout {
     
-    //  func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-    //
-    //  }
+
     
     func collectionView(_ collectionView2: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 220)
