@@ -11,7 +11,7 @@ class FitnessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let titles = ["Cardio", "Back", "Chest", "Swimming"]
+        let titles = ["Legs", "Full Body", "Swimming", "Upper Body", "Cardio"]
         
         for title in titles {
             let vc = FitnessSubCollectionViewController()

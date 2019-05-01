@@ -16,7 +16,7 @@ class FoodDetailViewController: UIViewController {
         title = recipe.name
         foodImage.image = recipe.image
         textField.text = recipe.body
-        instructionsTextField.text = recipe.body2 
+        instructionsTextField.text = recipe.body2
 
         
         if recipe.videoName == nil {
