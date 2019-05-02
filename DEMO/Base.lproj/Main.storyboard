@@ -70,7 +70,9 @@
         <scene sceneID="qCK-6g-RG4">
             <objects>
                 <navigationController id="llp-ZW-zZN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="hkv-jO-vtR"/>
+                    <tabBarItem key="tabBarItem" title="" id="hkv-jO-vtR">
+                        <inset key="imageInsets" minX="0.0" minY="16" maxX="0.0" maxY="-16"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JNF-Ji-JTo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -86,7 +88,7 @@
         <!--Fitness-->
         <scene sceneID="A7q-6L-CLh">
             <objects>
-                <viewController id="7rd-Pv-9x3" customClass="FitnessViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7rd-Pv-9x3" customClass="FitnessViewController" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fF0-yJ-nRJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +124,9 @@
                         <color key="backgroundColor" red="0.27387348630000002" green="0.60892326549999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="IDP-hQ-ukr"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fitness" id="dVv-GD-IiJ"/>
+                    <tabBarItem key="tabBarItem" title="Fitness" id="dVv-GD-IiJ">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="iF6-Dw-eqf"/>
                     <connections>
                         <outlet property="collectionView" destination="4iF-ul-eaM" id="fHf-Hk-TEC"/>
@@ -136,7 +140,7 @@
         <!--Fitness Detail View Controller-->
         <scene sceneID="di0-kb-QZy">
             <objects>
-                <viewController id="Gk9-f4-9g0" customClass="FitnessDetailViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gk9-f4-9g0" customClass="FitnessDetailViewController" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QpN-Iu-QZ4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,7 +187,7 @@
         <!--PPViewController-->
         <scene sceneID="ZRS-qt-aSS">
             <objects>
-                <viewController title="PPViewController" id="c45-hI-l8Z" customClass="PPViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="PPViewController" id="c45-hI-l8Z" customClass="PPViewController" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UPg-Pa-Mkc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,7 +203,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="160" id="8Mf-j8-buh" customClass="ProgressTableViewCell" customModule="DEMO" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="160" id="8Mf-j8-buh" customClass="ProgressTableViewCell" customModule="MEGAFIT" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Mf-j8-buh" id="MUw-d5-b9w">
@@ -271,7 +275,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWd-9m-UnI" customClass="SAButton" customModule="DEMO" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWd-9m-UnI" customClass="SAButton" customModule="MEGAFIT" customModuleProvider="target">
                                 <rect key="frame" x="228" y="306" width="131" height="30"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <state key="normal" title="Save"/>
@@ -301,7 +305,7 @@
                                     <segue destination="9ls-qQ-DPZ" kind="presentation" identifier="toAddProgressSegue" id="d9k-r9-cxE"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B1G-vr-jq8" customClass="ProfileHeaderView" customModule="DEMO" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B1G-vr-jq8" customClass="ProfileHeaderView" customModule="MEGAFIT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="414" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -319,7 +323,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="G3M-LK-8yN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="7Sp-Yp-V4I"/>
+                    <tabBarItem key="tabBarItem" title="" id="7Sp-Yp-V4I">
+                        <inset key="imageInsets" minX="0.0" minY="16" maxX="0.0" maxY="-16"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="addButton" destination="aE4-S6-bou" id="Bwl-zV-l7M"/>
                         <outlet property="addImageButton" destination="ebC-zq-Qpo" id="Yub-Ra-iCZ"/>
@@ -396,7 +402,7 @@
         <!--Add Progress View Controller-->
         <scene sceneID="ceS-N8-7jB">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="9ls-qQ-DPZ" customClass="AddProgressViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="9ls-qQ-DPZ" customClass="AddProgressViewController" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="voZ-iH-dX7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -416,7 +422,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ja0-eg-NIG" customClass="AppUIButton" customModule="DEMO" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ja0-eg-NIG" customClass="AppUIButton" customModule="MEGAFIT" customModuleProvider="target">
                                         <rect key="frame" x="8" y="153" width="100" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Cancel"/>
@@ -424,7 +430,7 @@
                                             <action selector="cancel:" destination="9ls-qQ-DPZ" eventType="touchUpInside" id="6LL-hg-lAN"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQL-ab-hDv" customClass="AppUIButton" customModule="DEMO" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQL-ab-hDv" customClass="AppUIButton" customModule="MEGAFIT" customModuleProvider="target">
                                         <rect key="frame" x="266" y="153" width="100" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Save"/>
@@ -471,7 +477,7 @@
         <!--Progress Photos View Controller-->
         <scene sceneID="ZbU-zm-5an">
             <objects>
-                <viewController id="uJ6-A9-61E" customClass="ProgressPhotosViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uJ6-A9-61E" customClass="ProgressPhotosViewController" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rIK-0z-6S5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -520,7 +526,7 @@
         <!--Food View Controller-->
         <scene sceneID="i7J-uS-mim">
             <objects>
-                <viewController id="RD2-2q-LXG" customClass="FoodViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RD2-2q-LXG" customClass="FoodViewController" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Kj-MN-5CB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -535,7 +541,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="xBN-0R-syM" customClass="FoodCell" customModule="DEMO" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="xBN-0R-syM" customClass="FoodCell" customModule="MEGAFIT" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -570,7 +576,7 @@
         <!--Food Detail View Controller-->
         <scene sceneID="Dhu-p3-d6O">
             <objects>
-                <viewController storyboardIdentifier="FoodDetailViewController" id="0OD-KB-jZH" customClass="FoodDetailViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoodDetailViewController" id="0OD-KB-jZH" customClass="FoodDetailViewController" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BIh-ps-0ab">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -639,7 +645,7 @@
         <!--Data Source-->
         <scene sceneID="hjG-G0-gCe">
             <objects>
-                <viewController id="BPn-6I-Vt3" customClass="CalendarViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BPn-6I-Vt3" customClass="CalendarViewController" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eXU-B8-4z8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -685,7 +691,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uKn-fC-ttt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="jyL-5r-0Bk"/>
+                    <tabBarItem key="tabBarItem" title="" id="jyL-5r-0Bk">
+                        <inset key="imageInsets" minX="0.0" minY="16" maxX="0.0" maxY="-16"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIm-mb-pla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -694,7 +702,7 @@
         <!--Home View Controller-->
         <scene sceneID="iT7-CR-NkT">
             <objects>
-                <viewController id="k9X-RP-YG2" customClass="HomeViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="k9X-RP-YG2" customClass="HomeViewController" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VTA-7O-sNe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -722,7 +730,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Rsx-vr-P1p"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="FYl-mV-he7"/>
+                    <tabBarItem key="tabBarItem" title="" id="FYl-mV-he7">
+                        <inset key="imageInsets" minX="0.0" minY="16" maxX="0.0" maxY="-16"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="webViewController" destination="Ncq-Np-mP2" id="uoh-6f-mRv"/>
                     </connections>
@@ -734,7 +744,7 @@
         <!--Customer Tab Bar-->
         <scene sceneID="A33-hw-kcB">
             <objects>
-                <tabBarController storyboardIdentifier="MainViewController" id="G5A-Iy-238" customClass="CustomerTabBar" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainViewController" id="G5A-Iy-238" customClass="CustomerTabBar" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vCx-6x-qMb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -755,7 +765,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -807,7 +817,7 @@
         <!--App Container View Control-->
         <scene sceneID="awh-M9-RHp">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rar-Dc-hEu" customClass="AppContainerViewControl" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rar-Dc-hEu" customClass="AppContainerViewControl" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ClZ-YO-huj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -823,7 +833,7 @@
         <!--Height View Controller-->
         <scene sceneID="Q9e-e9-qQs">
             <objects>
-                <viewController id="TKA-ba-lqv" customClass="HeightViewController" customModule="DEMO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TKA-ba-lqv" customClass="HeightViewController" customModule="MEGAFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rxe-jq-SBK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -876,7 +886,9 @@
         <scene sceneID="IDo-oG-JGj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jyO-W2-3aB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="cZI-cN-pYZ"/>
+                    <tabBarItem key="tabBarItem" title="" id="cZI-cN-pYZ">
+                        <inset key="imageInsets" minX="0.0" minY="16" maxX="0.0" maxY="-16"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wc1-Qq-aHj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
