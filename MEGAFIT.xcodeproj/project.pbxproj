@@ -43,7 +43,6 @@
 		898BFD582231AF8200143DF3 /* PPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898BFD572231AF8200143DF3 /* PPViewController.swift */; };
 		89A9A175225B990F001A0665 /* AddProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9A174225B990F001A0665 /* AddProgressViewController.swift */; };
 		89A9A177225BA26C001A0665 /* AppUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9A176225BA26C001A0665 /* AppUIButton.swift */; };
-		89A9A179225E77B9001A0665 /* ProgressPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9A178225E77B9001A0665 /* ProgressPhotosViewController.swift */; };
 		89A9A17B226210AB001A0665 /* ProgressRingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9A17A226210AB001A0665 /* ProgressRingViewController.swift */; };
 		89A9A181226356D2001A0665 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9A180226356D2001A0665 /* NotificationManager.swift */; };
 		89A9A18322635B25001A0665 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9A18222635B25001A0665 /* ProfileHeaderView.swift */; };
@@ -101,7 +100,6 @@
 		898BFD572231AF8200143DF3 /* PPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPViewController.swift; sourceTree = "<group>"; };
 		89A9A174225B990F001A0665 /* AddProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProgressViewController.swift; sourceTree = "<group>"; };
 		89A9A176225BA26C001A0665 /* AppUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIButton.swift; sourceTree = "<group>"; };
-		89A9A178225E77B9001A0665 /* ProgressPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPhotosViewController.swift; sourceTree = "<group>"; };
 		89A9A17A226210AB001A0665 /* ProgressRingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingViewController.swift; sourceTree = "<group>"; };
 		89A9A180226356D2001A0665 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		89A9A18222635B25001A0665 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				895F6581225A54370061C316 /* ProgressTableViewCell.swift */,
 				89A9A174225B990F001A0665 /* AddProgressViewController.swift */,
 				89A9A176225BA26C001A0665 /* AppUIButton.swift */,
-				89A9A178225E77B9001A0665 /* ProgressPhotosViewController.swift */,
 				895F6589225A77350061C316 /* Colours.xcassets */,
 			);
 			path = PP;
@@ -433,7 +430,6 @@
 			files = (
 				898BFD27222443A900143DF3 /* ImageCollectionViewCell.swift in Sources */,
 				89A9A177225BA26C001A0665 /* AppUIButton.swift in Sources */,
-				89A9A179225E77B9001A0665 /* ProgressPhotosViewController.swift in Sources */,
 				895F657E225A45C70061C316 /* Data.swift in Sources */,
 				2792DB4C222D743300200D37 /* FoodCell.swift in Sources */,
 				89361BD022414A0B005A21FA /* HomeViewController.swift in Sources */,

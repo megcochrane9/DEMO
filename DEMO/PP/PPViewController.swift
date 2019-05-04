@@ -162,11 +162,6 @@ class PPViewController: UIViewController, UIImagePickerControllerDelegate, UINav
             progressIndexToEdit = nil
         }
       
-      if segue.identifier == "Segue name" {
-        let destinationViewController = segue.destination as! ProgressPhotosViewController
-        let progress = sender as! ProgressPhotosModel
-        destinationViewController.progressId = progress.id
-      }
       
     }
     
@@ -244,17 +239,6 @@ extension PPViewController: UITableViewDataSource, UITableViewDelegate {
         
         return UISwipeActionsConfiguration(actions: [edit])
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let progress = Data.progressPhotosModels[indexPath.row]
-        
-        let storyboard = UIStoryboard(name: String(describing: ProgressPhotosViewController.self), bundle: nil)
-        let vc = storyboard.instantiateInitialViewController() as! ProgressPhotosViewController
-        vc.progressId = progress.id
-        navigationController?.pushViewController(vc, animated: true)
-        
-    }
-    
 
 }
 
