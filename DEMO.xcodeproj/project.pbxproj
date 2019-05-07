@@ -19,7 +19,6 @@
 		27ED94CA22258A6200CA37AC /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED94C922258A6200CA37AC /* FoodViewController.swift */; };
 		89361BCE2240328C005A21FA /* SAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BCD2240328C005A21FA /* SAButton.swift */; };
 		89361BD022414A0B005A21FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BCF22414A0B005A21FA /* HomeViewController.swift */; };
-		89361BD222415F00005A21FA /* HeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BD122415F00005A21FA /* HeightViewController.swift */; };
 		89361BD8224CE144005A21FA /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BD7224CE144005A21FA /* SectionHeaderView.swift */; };
 		89361BDA224E41BB005A21FA /* FitnessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BD9224E41BB005A21FA /* FitnessDetailViewController.swift */; };
 		89361BDC224E433C005A21FA /* SectionHeaderView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89361BDB224E433C005A21FA /* SectionHeaderView2.swift */; };
@@ -75,7 +74,6 @@
 		4F0C9C554AA990A4BE482265 /* Pods-DEMO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO.release.xcconfig"; path = "Pods/Target Support Files/Pods-DEMO/Pods-DEMO.release.xcconfig"; sourceTree = "<group>"; };
 		89361BCD2240328C005A21FA /* SAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAButton.swift; sourceTree = "<group>"; };
 		89361BCF22414A0B005A21FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		89361BD122415F00005A21FA /* HeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightViewController.swift; sourceTree = "<group>"; };
 		89361BD7224CE144005A21FA /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		89361BD9224E41BB005A21FA /* FitnessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessDetailViewController.swift; sourceTree = "<group>"; };
 		89361BDB224E433C005A21FA /* SectionHeaderView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView2.swift; sourceTree = "<group>"; };
@@ -103,7 +101,7 @@
 		89A9A17A226210AB001A0665 /* ProgressRingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingViewController.swift; sourceTree = "<group>"; };
 		89A9A180226356D2001A0665 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		89A9A18222635B25001A0665 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
-		89BCFF69220374370091CCA6 /* MEGAFIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEGAFIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89BCFF69220374370091CCA6 /* DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BCFF6C220374370091CCA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89BCFF6E220374370091CCA6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		89BCFF71220374370091CCA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -213,7 +211,7 @@
 		89BCFF6A220374370091CCA6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				89BCFF69220374370091CCA6 /* MEGAFIT.app */,
+				89BCFF69220374370091CCA6 /* DEMO.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,7 +227,6 @@
 				89361BCF22414A0B005A21FA /* HomeViewController.swift */,
 				89BCFF70220374370091CCA6 /* Main.storyboard */,
 				89A9A17A226210AB001A0665 /* ProgressRingViewController.swift */,
-				89361BD122415F00005A21FA /* HeightViewController.swift */,
 				895F6576225A424E0061C316 /* PP */,
 				89361BCD2240328C005A21FA /* SAButton.swift */,
 				27ED94C72225875700CA37AC /* CustomerTabBar.swift */,
@@ -269,9 +266,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		89BCFF68220374370091CCA6 /* MEGAFIT */ = {
+		89BCFF68220374370091CCA6 /* DEMO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 89BCFF91220374380091CCA6 /* Build configuration list for PBXNativeTarget "MEGAFIT" */;
+			buildConfigurationList = 89BCFF91220374380091CCA6 /* Build configuration list for PBXNativeTarget "DEMO" */;
 			buildPhases = (
 				8BC9A3EDF655083DF2E6CBD4 /* [CP] Check Pods Manifest.lock */,
 				89BCFF65220374370091CCA6 /* Sources */,
@@ -283,9 +280,9 @@
 			);
 			dependencies = (
 			);
-			name = MEGAFIT;
+			name = DEMO;
 			productName = DEMO;
-			productReference = 89BCFF69220374370091CCA6 /* MEGAFIT.app */;
+			productReference = 89BCFF69220374370091CCA6 /* DEMO.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -311,7 +308,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 89BCFF64220374370091CCA6 /* Build configuration list for PBXProject "MEGAFIT" */;
+			buildConfigurationList = 89BCFF64220374370091CCA6 /* Build configuration list for PBXProject "DEMO" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -324,7 +321,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				89BCFF68220374370091CCA6 /* MEGAFIT */,
+				89BCFF68220374370091CCA6 /* DEMO */,
 			);
 		};
 /* End PBXProject section */
@@ -449,7 +446,6 @@
 				89A9A18322635B25001A0665 /* ProfileHeaderView.swift in Sources */,
 				27C40C8F220D851900909B9B /* AppContainerViewController.swift in Sources */,
 				27712419224BCDFE0037E6C7 /* FoodDetailViewController.swift in Sources */,
-				89361BD222415F00005A21FA /* HeightViewController.swift in Sources */,
 				89BCFF6F220374370091CCA6 /* LoginViewController.swift in Sources */,
 				898BFD2B2226F09700143DF3 /* CalendarViewController.swift in Sources */,
 				89BCFF6D220374370091CCA6 /* AppDelegate.swift in Sources */,
@@ -620,7 +616,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = megcochrane.MEGAFIT;
+				PRODUCT_BUNDLE_IDENTIFIER = megcochrane.DEMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -640,7 +636,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = megcochrane.MEGAFIT;
+				PRODUCT_BUNDLE_IDENTIFIER = megcochrane.DEMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -650,7 +646,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		89BCFF64220374370091CCA6 /* Build configuration list for PBXProject "MEGAFIT" */ = {
+		89BCFF64220374370091CCA6 /* Build configuration list for PBXProject "DEMO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				89BCFF8F220374380091CCA6 /* Debug */,
@@ -659,7 +655,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		89BCFF91220374380091CCA6 /* Build configuration list for PBXNativeTarget "MEGAFIT" */ = {
+		89BCFF91220374380091CCA6 /* Build configuration list for PBXNativeTarget "DEMO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				89BCFF92220374380091CCA6 /* Debug */,
